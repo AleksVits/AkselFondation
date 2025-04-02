@@ -1,0 +1,848 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  position: relative;
+  width: 1440px;
+  background-color: #F8F9FA;
+  margin: 0 auto;
+  font-family: Roboto;
+  color: #444;
+}
+
+header .logo1 {
+  width: 136.789px;
+  height: 113px;
+  flex-shrink: 0;
+  aspect-ratio: 136.79/113;
+  position: absolute;
+  top: 13px;
+  left: 11px;
+  z-index: 10;
+}
+header .nav {
+  width: 579px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: linear-gradient(93deg, #DDECF7 47.74%, #E9CC3F 205.21%);
+  margin: 11px 48px 11px auto;
+}
+header .nav .nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+}
+header .nav li {
+  position: relative;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+header .nav li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #444;
+  transition: width 0.3s ease;
+}
+header .nav li:hover::after {
+  width: 100%;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #E9CC3F;
+}
+
+.LogoDiv {
+  position: relative;
+  height: 704px;
+  background-image: url("Img/fonsLogo.jpg");
+  background-size: cover; /* подгонка изображения */
+  background-position: center; /* центрирование */
+  background-repeat: no-repeat; /* отключить повтор */
+}
+.LogoDiv .textLogo {
+  position: absolute;
+  top: 200px;
+  color: #F8F9FA;
+  margin: auto auto auto 79px;
+}
+.LogoDiv .textLogo .sloganLogo {
+  font-size: 44px;
+  font-style: italic;
+  font-weight: 200;
+  line-height: 72px;
+}
+.LogoDiv .textLogo .h1 {
+  font-size: 80.239px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 93px; /* 115.904% */
+}
+.LogoDiv .textLogo .righrLogo {
+  margin-left: 365px;
+}
+.LogoDiv .textLogo .btn {
+  display: flex;
+  width: 349px;
+  padding: 18px 18px;
+  justify-content: center;
+  align-items: center;
+  background-color: #2483C4;
+  margin-left: 365px;
+  border-radius: 22px;
+  font-size: 22px;
+  margin-top: 68px;
+  transition: transform 0.5s ease;
+}
+.LogoDiv .textLogo .btn:hover {
+  transform: scale(1.1); /* увеличивает на 10% */
+  transition: transform 0.3s ease;
+}
+.LogoDiv .apanotationTextLogo {
+  color: #F8F9FA;
+  position: absolute;
+  bottom: 59px;
+  right: 81px;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 172%; /* 27.52px */
+  text-align: right;
+}
+
+main {
+  position: relative;
+}
+
+.about {
+  margin-top: 170px;
+}
+
+.logoAbout {
+  position: absolute;
+  top: -135px;
+  left: 408px;
+  z-index: -1;
+}
+
+.aboutProFond {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-left: 81px;
+  text-decoration: underline;
+  text-decoration-color: #2483C4;
+  text-decoration-thickness: 2px;
+}
+
+.blocks {
+  width: 952px;
+  height: 432px;
+  margin-top: 19px;
+  margin-left: 409px;
+  display: flex;
+}
+
+.blocksVertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.block1 {
+  width: 296px;
+  height: 200px;
+  padding: 16px 32px;
+  flex-shrink: 0;
+  border-radius: 0px 20px 20px 20px;
+  background: white;
+  /* Супер тень */
+  box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.3) inset, -1px -1px 2px 0px rgba(178, 178, 178, 0.5) inset, -4px 4px 8px 0px rgba(178, 178, 178, 0.2), 4px -4px 8px 0px rgba(178, 178, 178, 0.2), -4px -4px 8px 0px rgba(255, 255, 255, 0.9), 4px 4px 10px 0px rgba(178, 178, 178, 0.9);
+}
+
+.iconsAbout {
+  margin-top: 22px;
+  width: 40px;
+}
+
+.werticalIcons {
+  width: 31px;
+}
+
+.textAbout {
+  align-self: stretch;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 113.558%;
+  margin-top: 15px;
+}
+
+.f400 {
+  font-weight: 400;
+}
+
+.block2 {
+  margin-top: 30px;
+  width: 296px;
+  height: 200px;
+  padding: 16px 32px;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: white;
+  /* Супер тень */
+  box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.3) inset, -1px -1px 2px 0px rgba(178, 178, 178, 0.5) inset, -4px 4px 8px 0px rgba(178, 178, 178, 0.2), 4px -4px 8px 0px rgba(178, 178, 178, 0.2), -4px -4px 8px 0px rgba(255, 255, 255, 0.9), 4px 4px 10px 0px rgba(178, 178, 178, 0.9);
+}
+
+.blocksHorizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block3 {
+  width: 297px;
+  height: 385px;
+  padding: 16px 32px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: white;
+  margin-left: 30px;
+  /* Супер тень */
+  box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.3) inset, -1px -1px 2px 0px rgba(178, 178, 178, 0.5) inset, -4px 4px 8px 0px rgba(178, 178, 178, 0.2), 4px -4px 8px 0px rgba(178, 178, 178, 0.2), -4px -4px 8px 0px rgba(255, 255, 255, 0.9), 4px 4px 10px 0px rgba(178, 178, 178, 0.9);
+}
+
+.block4 {
+  width: 297px;
+  height: 385px;
+  padding: 16px 32px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: white;
+  margin-left: 30px;
+  /* Супер тень */
+  box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.3) inset, -1px -1px 2px 0px rgba(178, 178, 178, 0.5) inset, -4px 4px 8px 0px rgba(178, 178, 178, 0.2), 4px -4px 8px 0px rgba(178, 178, 178, 0.2), -4px -4px 8px 0px rgba(255, 255, 255, 0.9), 4px 4px 10px 0px rgba(178, 178, 178, 0.9);
+}
+
+.statistic {
+  height: 257px;
+  margin-top: 248px;
+  background-color: #2483C4;
+  color: #F8F9FA;
+}
+
+.statistOll {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.krilo {
+  margin-top: 20px;
+}
+
+.statisth3 {
+  margin-right: 30px;
+  font-size: 33px;
+  font-weight: 300;
+}
+
+.f500 {
+  font-weight: 500;
+}
+
+.numbrs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 850px;
+}
+
+.number1 {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.number {
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.textNumber {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}
+
+.mision {
+  margin-top: 165px;
+  display: flex;
+  position: relative;
+}
+
+.blockMision1 {
+  width: 510px;
+  height: 277px;
+  display: flex;
+  gap: 30px;
+  margin-left: 126px;
+}
+
+.text1Mision1 {
+  width: 296px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.f400 {
+  font-weight: 400;
+}
+
+.blockMision2 {
+  margin-left: 30px;
+  width: 592px;
+  display: flex;
+}
+
+.text1Mision2 {
+  width: 184px;
+  margin-right: 30px;
+  margin-top: 120px;
+}
+
+.img1Mision2 {
+  width: 376px;
+}
+
+.gasloMision {
+  position: absolute;
+  top: 352px;
+  left: 302px;
+}
+
+.gasloMision1 {
+  font-size: 35px;
+  font-weight: 300;
+  margin-left: 330px;
+}
+
+.f500 {
+  font-weight: 500;
+}
+
+.gasloMision2 {
+  font-size: 35px;
+  font-weight: 300;
+}
+
+.dopomoga {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 187px;
+}
+
+.yellow {
+  color: #E9CC3F;
+}
+
+.dopomoga1 {
+  background-image: url("Img/dopomogaImg.jpg");
+  background-size: cover; /* подгонка изображения */
+  background-position: center; /* центрирование */
+  background-repeat: no-repeat; /* отключить повтор */
+  width: 1142px;
+  height: 661px;
+  color: #F8F9FA;
+}
+
+.textdopomoga1 {
+  margin-top: 80px;
+  margin-left: 37px;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.textsDopomoga4 {
+  margin: 80px 0 80px 37px;
+}
+
+.textdopomoga2 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 76px;
+}
+.textdopomoga2::before {
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 25px;
+  vertical-align: middle;
+}
+
+.icon-1::before {
+  background-image: url("icons/dopomoga1.svg");
+}
+
+.icon-2::before {
+  background-image: url("icons/dopomoga2.svg");
+}
+
+.icon-3::before {
+  background-image: url("icons/dopomoga3.svg");
+}
+
+.icon-4::before {
+  background-image: url("icons/dopomoga4.svg");
+}
+
+.black {
+  margin-top: 200px;
+  width: 100%;
+  height: 1000px;
+  background-color: black;
+  overflow: hidden;
+}
+
+.logoBlack {
+  display: block;
+  margin: 60px auto 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.textBlack {
+  margin: 213px auto;
+  display: flex;
+}
+
+.btnBlack {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 296px;
+  padding: 16px 14px;
+  border-radius: 20px;
+  border: 1px solid #F8F9FA;
+  background: #000;
+  color: #F8F9FA;
+  transition: 0.3s ease;
+}
+.btnBlack:hover {
+  background: white;
+  color: black;
+  transition: 0.3s ease;
+}
+
+.Zbir {
+  display: flex;
+  gap: 76px;
+  position: relative;
+}
+
+.BigText {
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  text-transform: uppercase;
+  position: absolute;
+  top: 220px;
+}
+
+.blocksZbirVertical {
+  color: #F8F9FA;
+  width: 626px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 70px;
+  margin-left: 80px;
+}
+
+.blockZbir {
+  margin-top: 300px;
+  position: relative;
+  width: 625px;
+  height: 200px;
+  background-size: cover; /* подгонка изображения */
+  background-position: center; /* центрирование */
+  background-repeat: no-repeat; /* отключить повтор */
+  border-radius: 26px;
+  /* Супер тень */
+  box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.3) inset, -1px -1px 2px 0px rgba(178, 178, 178, 0.5) inset, -4px 4px 8px 0px rgba(178, 178, 178, 0.2), 4px -4px 8px 0px rgba(178, 178, 178, 0.2), -4px -4px 8px 0px rgba(255, 255, 255, 0.9), 4px 4px 10px 0px rgba(178, 178, 178, 0.9);
+}
+
+.imgOne {
+  background-image: url("Img/zbirM1.png");
+}
+
+.imgTwo {
+  background-image: url("Img/zbirM2.png");
+  margin-top: 36px;
+}
+
+.imgThree {
+  background-image: url("Img/zbirM3.png");
+  margin-top: 36px;
+}
+
+.textZbir {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  font-size: 22px;
+  font-weight: 400;
+  width: 293px;
+}
+
+.priseZbir {
+  font-size: 26px;
+  font-weight: 300;
+  width: 293px;
+  margin: -37px auto;
+}
+
+.f600 {
+  font-weight: 600;
+}
+
+.zbir {
+  position: absolute;
+  bottom: 26px;
+  right: 60px;
+  text-align: center;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 21.792px; /* 103.772% */
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+}
+.zbir::after {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  vertical-align: middle;
+  background-image: url("icons/arrow.svg");
+  transition: 0.3s ease;
+}
+.zbir:hover {
+  transition: 0.3s ease;
+  color: #E9CC3F;
+}
+
+.blockZbir1 {
+  color: #F8F9FA;
+  background-image: url("Img/zbirImg.png");
+  background-size: cover; /* подгонка изображения */
+  background-position: center; /* центрирование */
+  background-repeat: no-repeat; /* отключить повтор */
+  width: 578px;
+  height: 867px;
+  margin-top: 174px;
+  border-radius: 20px;
+  /* Супер тень */
+  box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.3) inset, -1px -1px 2px 0px rgba(178, 178, 178, 0.5) inset, -4px 4px 8px 0px rgba(178, 178, 178, 0.2), 4px -4px 8px 0px rgba(178, 178, 178, 0.2), -4px -4px 8px 0px rgba(255, 255, 255, 0.9), 4px 4px 10px 0px rgba(178, 178, 178, 0.9);
+}
+
+h4 {
+  font-size: 47.001px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+.textZbir1 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 111px;
+  width: 375px;
+  margin-top: 77px;
+}
+
+.textZbir2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 111px;
+  width: 375px;
+  margin-top: 23px;
+}
+
+.priseZbir1 {
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 46px;
+  margin-left: 111px;
+  margin-top: 56px;
+}
+
+.fs600 {
+  font-size: 38px;
+}
+
+.btnZbir1 {
+  margin: 53px auto;
+  background-color: #F8F9FA;
+  color: black;
+  width: 374px;
+  height: 77px;
+  padding: 14px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 75% */
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.btnZbir1:hover {
+  transform: scale(1.1); /* увеличивает на 10% */
+  transition: transform 0.3s ease;
+}
+
+.aboutZbir {
+  font-size: 12px;
+  font-weight: 400;
+  width: 229px;
+  display: flex;
+  margin: 31px auto;
+  text-align: center;
+}
+
+.zaklik {
+  margin-top: 360px;
+  position: relative;
+}
+
+.paragrapg1 {
+  font-size: 238px;
+  font-style: italic;
+  font-weight: 500;
+  color: #2483C4;
+  position: absolute;
+  top: -120px;
+  left: 270px;
+}
+
+.textZaklik {
+  font-size: 61px;
+  font-style: italic;
+  font-weight: 300;
+  width: 900px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.paragrapg2 {
+  font-size: 204px;
+  font-style: italic;
+  font-weight: 500;
+  color: #E9CC3F;
+  position: absolute;
+  top: 120px;
+  right: 270px;
+}
+
+.contacts {
+  margin-top: 358px;
+}
+
+.contactsCatd {
+  position: relative;
+  width: 1061px;
+  height: 743px;
+  /* Супер тень */
+  box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.3) inset, -1px -1px 2px 0px rgba(178, 178, 178, 0.5) inset, -4px 4px 8px 0px rgba(178, 178, 178, 0.2), 4px -4px 8px 0px rgba(178, 178, 178, 0.2), -4px -4px 8px 0px rgba(255, 255, 255, 0.9), 4px 4px 10px 0px rgba(178, 178, 178, 0.9);
+  border-radius: 20px;
+  margin-left: 300px;
+}
+
+.imgHand {
+  position: absolute;
+  background-size: cover; /* подгонка изображения */
+  background-position: center; /* центрирование */
+  background-repeat: no-repeat; /* отключить повтор */
+  width: 100%;
+}
+
+.textsContact {
+  width: 433px;
+  margin-left: 80px;
+  padding-top: 70px;
+  text-align: center;
+}
+.textsContact .nameCard {
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 20px;
+}
+.textsContact .gasloCard {
+  text-align: center;
+  font-family: Roboto;
+  font-size: 51px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+.textsContact .links {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.link {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.3s ease;
+}
+
+.linkF {
+  background-image: url("icons/facebook.svg");
+}
+
+.linkF:hover {
+  background-image: url("icons/facebookColor.svg");
+}
+
+.linkM {
+  background-image: url("icons/mail.svg");
+}
+.linkM:hover {
+  background-image: url("icons/mailColor.svg");
+}
+
+.linkP {
+  background-image: url("icons/phone.svg");
+}
+.linkP:hover {
+  background-image: url("icons/phoneColor.svg");
+}
+
+footer {
+  margin-top: 350px;
+  background-color: rgba(206, 219, 225, 0.7);
+  height: 190px;
+  position: relative;
+}
+
+.linksFooter {
+  display: flex;
+  gap: 160px;
+}
+
+.linkTel {
+  margin-left: 80px;
+  margin-top: 60px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.linkMail {
+  margin-top: 60px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.linkFacebook {
+  margin-top: 60px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.btnArrow {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  width: 92px;
+  height: 91px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 40px;
+  right: 33px;
+  transition: 0.3s ease;
+}
+.btnArrow .imgArrowUp {
+  width: 25px;
+  height: 39px;
+}
+
+.btnArrow:hover {
+  background-color: #E9CC3F;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.textFooter {
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 20px;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  display: flex;
+  justify-content: center;
+  margin: 40px auto 0 auto;
+}
+
+.AleksVits {
+  text-decoration: underline;
+}/*# sourceMappingURL=styles.css.map */
