@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   width: 1440px;
@@ -348,6 +352,55 @@ main {
 .gasloMision2 {
   font-size: 35px;
   font-weight: 300;
+}
+
+.gallery {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+}
+.gallery h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+.gallery .gallery-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding-bottom: 14px;
+  scroll-behavior: smooth;
+  scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+  scrollbar-width: thin;
+}
+.gallery .gallery-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.gallery .gallery-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.gallery .gallery-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.gallery .gallery-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.gallery .gallery-scroll img {
+  height: 480px;
+  border-radius: 16px;
+  flex-shrink: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.gallery .gallery-scroll img.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .dopomoga {
@@ -776,7 +829,6 @@ footer {
   margin-left: 80px;
   margin-top: 60px;
   font-size: 16px;
-  font-style: normal;
   font-weight: 300;
   line-height: 22px;
   display: flex;
@@ -787,7 +839,6 @@ footer {
 .linkMail {
   margin-top: 60px;
   font-size: 16px;
-  font-style: normal;
   font-weight: 300;
   line-height: 22px;
   display: flex;
@@ -798,9 +849,12 @@ footer {
 .linkFacebook {
   margin-top: 60px;
   font-size: 16px;
-  font-style: normal;
   font-weight: 300;
   line-height: 22px;
+}
+
+.linkFooter:hover {
+  font-weight: 400;
 }
 
 .btnArrow {

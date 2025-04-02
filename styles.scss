@@ -36,7 +36,9 @@ $color-blue:  #2483C4;
 $color-yellow: #E9CC3F;
 
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 body{
   position: relative;
@@ -429,6 +431,65 @@ font-weight: 300;
 .gasloMision2 {
   font-size: 35px;
   font-weight: 300;
+}
+///////////////////////////////////РОзділ галерея
+
+.gallery {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: 500;
+  }
+
+  .gallery-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding-bottom: 14px;
+    scroll-behavior: smooth;
+
+    // Мінімалістичний горизонтальний скролбар
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.15); // тонкий сірий
+      border-radius: 3px;
+      transition: background-color 0.3s ease;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+    scrollbar-width: thin;
+
+    img {
+      height: 480px;
+      border-radius: 16px;
+      flex-shrink: 0;
+      object-fit: cover;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+
+      &.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
 }
 
 
@@ -888,19 +949,16 @@ footer{
   margin-left: 80px;
   margin-top: 60px;
   font-size: 16px;
-  font-style: normal;
   font-weight: 300;
   line-height: 22px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  
 }
 
 .linkMail {
   margin-top: 60px;
   font-size: 16px;
-  font-style: normal;
   font-weight: 300;
   line-height: 22px;
   display: flex;
@@ -911,9 +969,12 @@ footer{
 .linkFacebook {
   margin-top: 60px;
   font-size: 16px;
-  font-style: normal;
   font-weight: 300;
   line-height: 22px;
+}
+
+.linkFooter:hover{
+  font-weight: 400;
 }
 
 .btnArrow {

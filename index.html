@@ -10,7 +10,7 @@
 <body>
 
   <header>
-    <img class="logo1" src="Img/logoColor.png" alt="">
+    <img class="logo1" id="header" src="Img/logoColor.png" alt="">
     <div class="nav">
       <ul class="nav-list">
         <li>Про нас</li>
@@ -30,7 +30,7 @@
           <p class="h1Logo">Благодійний фонд</p>
           <p class="h1Logo righrLogo">"Аксель"</p>
         </div>
-        <div class="btn">Долучитись до допомоги</div>
+        <div class="btn"><a href="#pay">Долучитись до допомоги</a></div>
       </div>
       <p class="apanotationTextLogo">З 2012 року ми допомагаємо тим, хто цього потребує. <br>З 2022 — ми поруч із тими, хто боронить Україну.</p>
 
@@ -113,6 +113,28 @@
        </div>
     </section>
 
+    <section class="gallery">
+      <h2 class="aboutProFond">Миті нашої діяльності</h2>
+      <div class="gallery-scroll">
+        <img src="Img/galery/photo1.jpg" alt="">
+        <img src="Img/galery/photo2.jpg" alt="">
+        <img src="Img/galery/photo3.jpg" alt="">
+        <img src="Img/galery/photo4.jpg" alt="">
+        <img src="Img/galery/photo5.jpg" alt="">
+        <img src="Img/galery/photo6.jpg" alt="">
+        <img src="Img/galery/photo7.jpg" alt="">
+        <img src="Img/galery/photo8.jpg" alt="">
+        <img src="Img/galery/photo9.jpg" alt="">
+        <img src="Img/galery/photo10.jpg" alt="">
+        <img src="Img/galery/photo11.jpg" alt="">
+        <img src="Img/galery/photo12.jpg" alt="">
+        <img src="Img/galery/photo13.jpg" alt="">
+        <img src="Img/galery/photo14.jpg" alt="">
+      </div>
+    </section>
+    
+    
+
     <section class="dopomoga">
       <h2 class="aboutProFond">Як допомогти</h2>
       <div class="dopomoga1">
@@ -131,10 +153,11 @@
     <section class="black">
       <img class="logoBlack" src="Img/logoBlacs.png">
       <img src="Img/doluchis.png" class="textBlack">
-      <div class="btnBlack">Долучитись до допомоги</div>
+      <div class="btnBlack"><a href="#pay">Долучитись до допомоги</a></div>
     </section>
 
-    <section class="Zbir">
+
+    <section class="Zbir" id="pay">
       <h2 class="aboutProFond BigText">Актуальні збори</h2> 
       <div class="blocksZbirVertical">
         <div class="blockZbir imgOne">
@@ -201,18 +224,18 @@
     <div class="line"></div>
     <div class="linksFooter">
       <div class="linkTel">
-        <a href="">+380 (95) 946-59-47</a>
-        <a href="">+380 (95) 336-55-50</a>
+        <a class="linkFooter" href="">+380 (95) 946-59-47</a>
+        <a class="linkFooter" href="">+380 (95) 336-55-50</a>
       </div>
       <div class="linkMail">
-        <a href="">info@fondaksel.com.ua</a>
-        <a href="">fondaksel@gmail.com</a>
+        <a class="linkFooter" href="">info@fondaksel.com.ua</a>
+        <a class="linkFooter" href="">fondaksel@gmail.com</a>
       </div>
       <div class="linkFacebook">
-        <a href="">facebook.com</a>
+        <a class="linkFooter" href="">facebook.com</a>
       </div>
     </div>
-    <div class="btnArrow"><img class="imgArrowUp" src="icons/arrowUp.svg" alt=""> На гору</div>
+    <div class="btnArrow"><a href="#header"><img class="imgArrowUp" src="icons/arrowUp.svg" alt=""></a> На гору</div>
     <div class="textFooter">© 2025 Благодійний фонд "Аксель" | Всі права захищені | Розроблено: <a class="AleksVits" href="#"></a>  @AleksVits</div>
   </footer>
 
@@ -223,5 +246,24 @@
 
     </div>
   </div> -->
+
+  <script>
+    // Анімація появи з IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+  
+    document.querySelectorAll('.gallery-scroll img').forEach(img => {
+      observer.observe(img);
+    });
+  </script>
+
+
 </body>
 </html>
