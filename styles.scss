@@ -635,6 +635,19 @@ margin-top: 187px;
   }
 }
 
+.btnBlack a svg {
+  width: 32px;
+  height: 32px;
+  color: #fff; /* або чорний, або #FFD700 для акценту */
+  transition: transform 0.3s ease;
+}
+
+.btnBlack a:hover svg {
+  transform: translateY(5px);
+}
+
+
+
 //////////////////////////////Розділ Актуальні збори
 
 .Zbir {

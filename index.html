@@ -158,7 +158,18 @@
     <section class="black">
       <img class="logoBlack" src="Img/logoBlacs.png">
       <img src="Img/doluchis.png" class="textBlack">
-      <div class="btnBlack"><a href="#pay">Долучись</a></div>
+      <!-- <div class="btnBlack">
+        <a href="#pay">Долучись</a>
+      </div> -->
+
+      <div class="btnBlack">
+        <a href="#pay" aria-label="Долучись">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 9L12 16L19 9" stroke="currentColor" stroke-width="3"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
     </section>
 
 
@@ -168,17 +179,17 @@
         <div class="blockZbir imgOne">
           <p class="textZbir">Збір на тактичне спорядження для підрозділу</p>
           <p class="priseZbir">Ціль: <strong class="f600">250 000</strong> грн</p>
-          <a href="#" class="zbir">Підтримати</a>
+          <a href="javascript:void(0)" class="zbir">Підтримати</a>
         </div>
         <div class="blockZbir imgTwo">
           <p class="textZbir">Збір на портативні генератори та павербанки</p>
           <p class="priseZbir">Ціль: <strong class="f600">180 000</strong> грн</p>
-          <a href="#" class="zbir">Підтримати</a>
+          <a href="javascript:void(0)" class="zbir">Підтримати</a>
         </div>
         <div class="blockZbir imgThree">
           <p class="textZbir">Збір на аптечки та медичне спорядження</p>
           <p class="priseZbir">Ціль: <strong class="f600">120 000</strong> грн</p>
-          <a href="#" class="zbir">Підтримати</a>
+          <a href="javascript:void(0)" class="zbir">Підтримати</a>
         </div>
       </div>
       <div class="blockZbir1">
@@ -301,58 +312,60 @@
 
 
   <script>
-    // Анімація появи з IntersectionObserver
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, index) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, index * 100); // задержка по порядку
+    document.addEventListener('DOMContentLoaded', () => {
+  
+      // Анімація появи
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('visible');
+            }, index * 100);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+  
+      document.querySelectorAll('.gallery-scroll img').forEach(img => {
+        observer.observe(img);
+      });
+  
+      // Модальне вікно
+      const openModalBtns = document.querySelectorAll('.zbir, .btnZbir1');
+      const modal = document.getElementById('donationModal');
+      const closeModalBtn = modal.querySelector('.close-modal');
+  
+      openModalBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          modal.classList.add('show');
+        });
+      });
+  
+      closeModalBtn.addEventListener('click', () => {
+        modal.classList.remove('show');
+      });
+  
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.remove('show');
         }
       });
-    }, {
-      threshold: 0.1
-    });
   
-    document.querySelectorAll('.gallery-scroll img').forEach(img => {
-      observer.observe(img);
+      // Копіювання IBAN
+      const copyBtn = modal.querySelector('.iban-copy button');
+      const ibanInput = modal.querySelector('.iban-copy input');
+  
+      copyBtn.addEventListener('click', () => {
+        ibanInput.select();
+        document.execCommand('copy');
+        copyBtn.textContent = '✓';
+        setTimeout(() => copyBtn.textContent = '📋', 1500);
+      });
     });
-
-
-
-
-
-    /////////////////////////////////////////
-    const openModalBtn = document.querySelector('.btnZbir1');
-  const modal = document.getElementById('donationModal');
-  const closeModalBtn = modal.querySelector('.close-modal');
-
-  openModalBtn.addEventListener('click', () => {
-    modal.classList.add('show');
-  });
-
-  closeModalBtn.addEventListener('click', () => {
-    modal.classList.remove('show');
-  });
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.classList.remove('show');
-    }
-  });
-
-  // Копіювання IBAN
-  const copyBtn = modal.querySelector('.iban-copy button');
-  const ibanInput = modal.querySelector('.iban-copy input');
-
-  copyBtn.addEventListener('click', () => {
-    ibanInput.select();
-    document.execCommand('copy');
-    copyBtn.textContent = '✓';
-    setTimeout(() => copyBtn.textContent = '📋', 1500);
-  });
-
   </script>
+  
 
 
 
