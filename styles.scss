@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-
-
-
 @mixin colorBackgroundWhite {
   background-color: $color-white;
 }
@@ -42,12 +39,11 @@ html {
 
 body{
   position: relative;
-  width: 1440px;
+  max-width: 1440px;
   background-color: $color-white;
   margin: 0 auto;
   font-family: Roboto;
   color: $color-black;
-
 }
 
 header{
@@ -129,14 +125,18 @@ header{
       font-style: italic;
       font-weight: 200;
       line-height: 72px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.945);
+
     }
     
     .h1 {
-      font-size: 80.239px;
+      font-size: 80px;
       font-style: normal;
       font-weight: 600;
       line-height: 93px; /* 115.904% */
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.945);
     }
+    
     .righrLogo{
       margin-left: 365px
     }
@@ -153,6 +153,8 @@ header{
       font-size: 22px;
       margin-top: 68px;
       transition: transform 0.5s ease;
+      text-transform: uppercase;
+      letter-spacing: 4.5px; // или больше — например, 2px для выразительности
     }
     .btn:hover {
       transform: scale(1.1); /* увеличивает на 10% */
@@ -171,8 +173,7 @@ header{
     font-weight: 400;
     line-height: 172%; /* 27.52px */
     text-align: right;
-
-
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.945);
   }
   
 }
@@ -201,7 +202,7 @@ main{
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
-  margin-left: 81px;
+  margin-left: 20px;
   text-decoration: underline;
   text-decoration-color: $color-blue;
   text-decoration-thickness: 2px;
@@ -310,7 +311,7 @@ box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.30) inset, -1px -1px 2px 0px r
 /////////////////////////Розділ Ми вже допомогли
 .statistic {
   // width: 1440px;
-height: 257px;
+height: 280px;
 margin-top: 248px;
 background-color: $color-blue;
 color: $color-white;
@@ -376,7 +377,8 @@ color: $color-white;
   height: 277px;
   display: flex;
   gap: 30px;
-  margin-left: 126px;
+  margin-left: 190px;
+  
 }
 
 .text1Mision1 {
@@ -435,22 +437,45 @@ font-weight: 300;
 ///////////////////////////////////РОзділ галерея
 
 .gallery {
+  margin-top: 165px;
   padding: 60px 20px;
-  background-color: #f5f5f5;
+  // background-color: #f5f5f5;
 
-  h2 {
+  h2{
+margin-bottom: 30px;
+  }
+
+  .galeryText {
+    margin-top: 30px;
     text-align: center;
-    font-size: 36px;
-    margin-bottom: 30px;
-    font-weight: 500;
+    font-size: 35px;
+    font-weight: 300;
+  }
+  .galText{
+    margin-left: 0;
   }
 
   .gallery-scroll {
     display: flex;
     overflow-x: auto;
+    overflow-y: hidden;
+    max-height: 100%;
     gap: 16px;
     padding-bottom: 14px;
     scroll-behavior: smooth;
+
+    .gallery-scroll img {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      will-change: opacity, transform;
+    }
+    
+    .gallery-scroll img.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
 
     // Мінімалістичний горизонтальний скролбар
     &::-webkit-scrollbar {
@@ -599,6 +624,8 @@ margin-top: 187px;
   background: #000;
   color: $color-white;
   transition: 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 4.5px; // или больше — например, 2px для выразительности
 
   &:hover{
     background: white;
@@ -614,6 +641,8 @@ margin-top: 187px;
   display: flex;
   gap: 76px;
   position: relative;
+  margin-top: 150px;
+
 }
 
 .BigText {
@@ -623,7 +652,9 @@ margin-top: 187px;
   line-height: normal;
   text-transform: uppercase;
   position: absolute;
-  top: 220px;
+  top: 50px;
+  margin-left: 80px;
+
 }
 
 .blocksZbirVertical {
@@ -634,21 +665,35 @@ margin-top: 187px;
   justify-content: center;
   margin-top: 70px;
   margin-left: 80px;
+  position: relative;
+  height: 1100px; // высота, в пределах которой могут вырасти блоки
 }
 
 .blockZbir {
-  margin-top: 300px;
+  margin-top: 30px;
   position: relative;
   width: 625px;
-  height: 200px;
+  height: 250px;
   background-size: cover; /* подгонка изображения */
   background-position: center; /* центрирование */
   background-repeat: no-repeat; /* отключить повтор */
   border-radius: 26px; 
   /* Супер тень */
-box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.30) inset, -1px -1px 2px 0px rgba(178, 178, 178, 0.50) inset, -4px 4px 8px 0px rgba(178, 178, 178, 0.20), 4px -4px 8px 0px rgba(178, 178, 178, 0.20), -4px -4px 8px 0px rgba(255, 255, 255, 0.90), 4px 4px 10px 0px rgba(178, 178, 178, 0.90);
-
+  box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.30) inset,
+              -1px -1px 2px 0px rgba(178, 178, 178, 0.50) inset,
+              -4px 4px 8px 0px rgba(178, 178, 178, 0.20),
+              4px -4px 8px 0px rgba(178, 178, 178, 0.20),
+              -4px -4px 8px 0px rgba(255, 255, 255, 0.90),
+              4px 4px 10px 0px rgba(178, 178, 178, 0.90);   
+transition: 0.7s ease;
+transform-origin: bottom center; // важливо: зміщення буде "вгору"
 }
+
+.blockZbir:hover{
+  height: 400px;
+  transition: 0.7s ease;
+}
+
 .imgOne{
   background-image: url('Img/zbirM1.png');
 }
@@ -667,12 +712,25 @@ box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.30) inset, -1px -1px 2px 0px r
   justify-content: center;
   align-items: center;
   margin: 50px auto;
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 400;
-  width: 293px;
+  width: 493px;
+
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
+
 .priseZbir {
+  position: absolute;
+  top: 90%;
+  left: 30%;
+  transform: translate(-50%, 20%);
+  text-align: center;
+
   font-size: 26px;
   font-weight: 300;
   width: 293px;
@@ -811,6 +869,17 @@ color: $color-blue;
 position: absolute;
 top: -120px;
 left: 270px;
+animation: pulseScale 7s ease-in-out infinite;
+display: inline-block; // важно для scale
+transform-origin: center;
+}
+@keyframes pulseScale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2); // масштаб увеличения
+  }
 }
 
 .textZaklik {
@@ -891,6 +960,17 @@ left: 270px;
     align-items: center;
  
   }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  
+
 }
 
 .link {
@@ -901,6 +981,8 @@ left: 270px;
   background-repeat: no-repeat;
   background-position: center;
   transition: background-image 0.3s ease;
+  position: relative; // 👈 ОБЯЗАТЕЛЬНО добавь
+  z-index: 10;         // 👈 и можешь протестить с ним
 }
 
 .linkF {
@@ -992,6 +1074,9 @@ footer{
   top: 40px;
   right: 33px;
   transition: 0.3s ease;
+  border-radius: 50%;
+  transition: 0.7s ease;
+
 
   .imgArrowUp{
     width: 25px;
@@ -1000,13 +1085,12 @@ footer{
 }
 .btnArrow:hover{
   background-color: $color-yellow;
-  border-radius: 50%;
-  transition: 0.3s ease;
+  transition: 0.7s ease;
 }
 
 
 .textFooter {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 300;
   line-height: 20px;
   text-decoration-skip-ink: none;
@@ -1014,13 +1098,282 @@ footer{
   text-underline-offset: auto;
   display: flex;
   justify-content: center;
-  margin: 40px auto 0 auto;
+  margin: 35px auto 0 auto;
 }
 
 
 
 .AleksVits {
-  text-decoration: underline;
+  // text-decoration: underline;
+  font-size: 14px;
+  color: #000;
+
 
 }
 
+
+///////////////////////////////////Розділ Оплати
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.836);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  
+
+  &.show {
+    display: flex;
+  }
+}
+
+.modal-content {
+  background: black;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
+  padding: 40px;
+  animation: fadeIn 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 70px;
+  cursor: pointer;
+  color: #444;
+
+  &:hover{
+  color: #8b8b8b;
+
+  }
+}
+
+.modal-box {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.modal-left, .modal-right {
+  flex: 1;
+  padding: 30px;
+  border-radius: 16px;
+  width: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  z-index: 10;
+
+}
+
+.modal-left {
+  background: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    margin-bottom: 50px;
+    margin-top: 67px;
+    font-size: 32px;
+    font-weight: 300;
+  }
+
+  .input-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    input {
+      flex: 1;
+      padding: 15px 15px;
+      border-radius: 15px;
+      border: none;
+      font-size: 22px;
+      color: $color-black;
+    }
+
+    span {
+      font-size: 22px;
+    }
+  }
+
+  .quick-buttons {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+
+    button {
+      background: #555;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: 0.2s;
+
+      &:hover {
+        background: #777;
+      }
+    }
+  }
+
+  .support-btn {
+    margin-top: 70px;
+    background: white;
+    color: black;
+    font-size: 22px;
+    padding: 12px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-transform: uppercase;
+    border: 3px solid white;
+
+
+    &:hover {
+      // transform: scale(1.05);
+      border: 3px solid black;
+    }
+
+    .arrow {
+      font-size: 24px;
+      margin-left: 10px;
+    }
+  }
+
+  .logoPayPhon{
+    position: absolute;
+    bottom: 90px;
+    left: 40px;
+    z-index: -1;
+    
+  }
+}
+
+.modal-right {
+  background: $color-white;
+  color: $color-black;
+  position: relative;
+
+  .logoPayPhon{
+    position: absolute;
+    top: 22px;
+    right: 22px;
+  }
+
+  h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    margin-top: 67px;
+    font-size: 32px;
+    font-weight: 300;
+  }
+
+  .sub {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 200;
+  }
+
+  p{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 31.668px; /* 181.25% */
+  }
+
+  .iban-copy {
+    display: flex;
+    margin: 20px 0;
+
+    input {
+      flex: 1;
+      padding: 18px 12px;
+      font-size: 18px;
+      font-weight: 300;
+      border: 1px solid #ccc;
+      border-radius: 20px 0 0 20px;
+    }
+
+    button {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-left: none;
+      border-radius: 0 10px 10px 0;
+      background: #eee;
+      cursor: pointer;
+
+      &:hover {
+        background: #ddd;
+      }
+    }
+  }
+
+  .purpose {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  .qr {
+    width: 160px;
+    height: auto;
+    margin: 30px auto;
+    display: flex;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(50px) scale(0.98);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////Адаптація 
+///
+
+
+
+/// 
+
+
+/// 
+
+
+/// 
+
+
+/// 
