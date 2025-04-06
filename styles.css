@@ -72,10 +72,9 @@ header .nav li:hover::after {
   background-repeat: no-repeat; /* отключить повтор */
 }
 .LogoDiv .textLogo {
-  position: absolute;
-  top: 200px;
   color: #F8F9FA;
-  margin: auto auto auto 79px;
+  padding: 150px 80px;
+  width: auto;
 }
 .LogoDiv .textLogo .sloganLogo {
   font-size: 44px;
@@ -86,13 +85,10 @@ header .nav li:hover::after {
 }
 .LogoDiv .textLogo .h1 {
   font-size: 80px;
-  font-style: normal;
   font-weight: 600;
   line-height: 93px; /* 115.904% */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.945);
-}
-.LogoDiv .textLogo .righrLogo {
-  margin-left: 365px;
+  width: auto;
 }
 .LogoDiv .textLogo .btn {
   display: flex;
@@ -100,8 +96,8 @@ header .nav li:hover::after {
   padding: 18px 18px;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   background-color: #2483C4;
-  margin-left: 365px;
   border-radius: 22px;
   font-size: 22px;
   margin-top: 68px;
@@ -1203,4 +1199,56 @@ footer {
     transform: translateY(0) scale(1);
     opacity: 1;
   }
+}
+.burger-btn {
+  display: none;
+  width: 30px;
+  height: 25px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.burger-btn span {
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 35%;
+  height: auto;
+  background: linear-gradient(to bottom right, #e0f0ff, #e0f5d8);
+  transition: right 0.3s ease;
+  padding: 60px 20px;
+  z-index: 998;
+  border-radius: 0 0 0 20px;
+}
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+.mobile-menu ul li {
+  margin: 20px 0;
+}
+.mobile-menu ul li a {
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  font-weight: 300;
+}
+.mobile-menu.open {
+  right: 0;
+}
+.mobile-menu .close-btn {
+  position: absolute;
+  top: 0px;
+  right: 60px;
+  background: none;
+  border: none;
+  font-size: 52px;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

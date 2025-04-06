@@ -134,57 +134,26 @@ $color-yellow: #E9CC3F;
       }      
 
       .textLogo {
-        position: absolute;
+        // position: absolute;
         top: 200px;
-        @include colorWhite;
-        margin: auto auto auto 79px;
-    
-    
-        .sloganLogo {
-          font-size: 44px;
-          font-style: italic;
-          font-weight: 200;
-          line-height: 72px;
-          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.945);
-    
-        }
-        
-        .h1 {
-          font-size: 60px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 93px; /* 115.904% */
-          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.945);
-        }
-        
-        .righrLogo{
-          margin-left: 365px
-        }
-        
-        .btn {
-          display: flex;
-          width: 349px;
-          padding: 18px 18px;
-          justify-content: center;
-          align-items: center;
-          @include colorBackgroundBlue;
-          margin-left: 365px;
-          border-radius: 22px;
-          font-size: 22px;
-          margin-top: 68px;
-          transition: transform 0.5s ease;
-          text-transform: uppercase;
-          letter-spacing: 4.5px; // или больше — например, 2px для выразительности
-        }
+        color: $color-white;
+        // margin: auto auto auto 79px;
+        padding: 150px 80px;
       }
-
 }
   
   @media (max-width: 1325px) {
     .blocks {
         margin-top: 19px;
         margin-left: 300px;
-        // display: block;
+      }
+
+      
+      .h1 {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 93px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.945);
       }
   }
 
@@ -404,6 +373,41 @@ $color-yellow: #E9CC3F;
         // display: inline-block;
       }
 
+
+      .textLogo {
+        // top: 200px;
+        color: $color-white;
+        padding: 0px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: center;
+        width: 1200px;
+        margin-left: 0;
+        padding-left: 0;
+      }
+
+      .sloganLogo{
+        text-align: end;
+        padding-right: 10px;
+        margin-bottom: 20px;
+      }
+
+      .h1Logo{
+        font-size: 90px;
+      }
+
+      .btn {
+        display: block;
+        width: 349px;
+        padding: 18px 18px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-left: 0px;
+        font-size: 22px;
+        margin-top: 68px;
+      }
 }
 
 @media (max-width: 970px) {
@@ -473,7 +477,7 @@ $color-yellow: #E9CC3F;
       }
 }
 
-@media (max-width: 930px) {
+@media (max-width: 932px) {
     .blocks {
         // margin-top: 19px;
         margin-left: 230px;
@@ -492,13 +496,37 @@ $color-yellow: #E9CC3F;
         height: 643px;
       }
 
+      .h1Logo{
+        font-size: 80px;
+      }
+      .righrLogo{
+        margin-left: 1px
+      }
+
+      .LogoDiv{
+        height: auto;
+      }
+
+      .burger-btn {
+        display: flex;
+      }
+      
+      .nav-list{
+        .liNav{
+          display: none;
+        }
+      }
+
+      .nav{
+        width: 65px !important;
+        height: 50px !important;
+      }
+
 }
 
 @media (max-width: 899px) {
     .blocks {
-        // margin-top: 19px;
         margin-left: 210px;
-        // display: inline-block;
       }
 
 }
@@ -631,13 +659,41 @@ $color-yellow: #E9CC3F;
       }
 }
 
+@media (max-width: 845px) {
+  .textLogo {
+    color: $color-white;
+    padding: 150px 0px;
+    width: auto;
+  }
+  .h1Logo{
+    font-size: 70px;
+  }
+}
+
 @media (max-width: 800px) {
     .contactsCatd {
         height: 543px;
       }
 }
 
+@media (max-width: 759px) {
+  .h1Logo{
+    font-size: 65px;
+  }
+}
 
+@media (max-width: 745px) {
+  .h1Logo{
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 675px) {
+  .h1Logo{
+    font-size: 50px;
+    margin-bottom: -25px;
+  }
+}
 
 @media (max-width: 613px){
     .paragrapg1 {
@@ -654,7 +710,23 @@ $color-yellow: #E9CC3F;
       }
 }
 
+@media (max-width: 588px) {
+  .h1Logo{
+    font-size: 45px;
+    margin-bottom: -25px;
+  }
 
+  .apanotationTextLogo {
+    bottom: 50px;
+    right: 81px;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 172%; /* 27.52px */
+    text-align: right;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.945);
+  }
+}
 
 
 //   .blocks {

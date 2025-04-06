@@ -14,13 +14,33 @@
     <img class="logo1" id="header" src="Img/logoColor.png" alt="">
     <div class="nav">
       <ul class="nav-list">
-        <li>Про нас</li>
-        <li>Місія</li>
-        <li>Як допомогти</li>
-        <li>Збір</li>
-        <li>Контакти</li>
+        <li class="liNav">Про нас</li>
+        <li class="liNav">Місія</li>
+        <li class="liNav">Як допомогти</li>
+        <li class="liNav">Збір</li>
+        <li class="liNav">Контакти</li>
+        <div class="burger-btn" id="burgerBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        
+        <!-- Мобільне меню -->
+        <div class="mobile-menu" id="mobileMenu">
+          <button class="close-btn" id="closeMenu">&times;</button>
+          <ul>
+            <li><a href="#about">ПРО НАС</a></li>
+            <li><a href="#mission">МІСІЯ</a></li>
+            <li><a href="#help">ЯК ДОПОМОГТИ</a></li>
+            <li><a href="#pay"><strong>ЗБІР</strong></a></li>
+            <li><a href="#contacts">КОНТАКТИ</a></li>
+          </ul>
+        </div>
+      </div>
       </ul>
-    </div>
+
+
+
 
     <div class="line"></div>
     
@@ -366,21 +386,27 @@
         setTimeout(() => copyBtn.textContent = '📋', 1500);
       });
     });
+
+//////////////////////Бургер меню
+    const burgerBtn = document.getElementById('burgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMenu = document.getElementById('closeMenu');
+
+burgerBtn.addEventListener('click', () => {
+  mobileMenu.classList.add('open');
+});
+
+closeMenu.addEventListener('click', () => {
+  mobileMenu.classList.remove('open');
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === mobileMenu) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
   </script>
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>

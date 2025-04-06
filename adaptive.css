@@ -108,11 +108,22 @@
   .textdopomoga2 {
     font-size: 30px;
   }
+  .textLogo {
+    top: 200px;
+    color: #F8F9FA;
+    padding: 150px 80px;
+  }
 }
 @media (max-width: 1325px) {
   .blocks {
     margin-top: 19px;
     margin-left: 300px;
+  }
+  .h1 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 93px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.945);
   }
 }
 @media (max-width: 1270px) {
@@ -290,6 +301,35 @@
   .blocks {
     margin-left: 300px;
   }
+  .textLogo {
+    color: #F8F9FA;
+    padding: 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1200px;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .sloganLogo {
+    text-align: end;
+    padding-right: 10px;
+    margin-bottom: 20px;
+  }
+  .h1Logo {
+    font-size: 90px;
+  }
+  .btn {
+    display: block;
+    width: 349px;
+    padding: 18px 18px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-left: 0px;
+    font-size: 22px;
+    margin-top: 68px;
+  }
 }
 @media (max-width: 970px) {
   .blocks {
@@ -350,7 +390,7 @@
     right: 33px;
   }
 }
-@media (max-width: 930px) {
+@media (max-width: 932px) {
   .blocks {
     margin-left: 230px;
   }
@@ -362,6 +402,25 @@
   }
   .contactsCatd {
     height: 643px;
+  }
+  .h1Logo {
+    font-size: 80px;
+  }
+  .righrLogo {
+    margin-left: 1px;
+  }
+  .LogoDiv {
+    height: auto;
+  }
+  .burger-btn {
+    display: flex;
+  }
+  .nav-list .liNav {
+    display: none;
+  }
+  .nav {
+    width: 65px !important;
+    height: 50px !important;
   }
 }
 @media (max-width: 899px) {
@@ -473,9 +532,35 @@
     height: auto;
   }
 }
+@media (max-width: 845px) {
+  .textLogo {
+    color: #F8F9FA;
+    padding: 150px 0px;
+    width: auto;
+  }
+  .h1Logo {
+    font-size: 70px;
+  }
+}
 @media (max-width: 800px) {
   .contactsCatd {
     height: 543px;
+  }
+}
+@media (max-width: 759px) {
+  .h1Logo {
+    font-size: 65px;
+  }
+}
+@media (max-width: 745px) {
+  .h1Logo {
+    font-size: 60px;
+  }
+}
+@media (max-width: 675px) {
+  .h1Logo {
+    font-size: 50px;
+    margin-bottom: -25px;
   }
 }
 @media (max-width: 613px) {
@@ -489,5 +574,21 @@
   }
   .textZaklik {
     font-size: 50px;
+  }
+}
+@media (max-width: 588px) {
+  .h1Logo {
+    font-size: 45px;
+    margin-bottom: -25px;
+  }
+  .apanotationTextLogo {
+    bottom: 50px;
+    right: 81px;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 172%; /* 27.52px */
+    text-align: right;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.945);
   }
 }/*# sourceMappingURL=adaptive.css.map */

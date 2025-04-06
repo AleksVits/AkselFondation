@@ -115,10 +115,13 @@ header{
   background-repeat: no-repeat; /* отключить повтор */
 
   .textLogo {
-    position: absolute;
-    top: 200px;
-    @include colorWhite;
-    margin: auto auto auto 79px;
+    // position: absolute;
+    // top: 200px;
+    color: $color-white;
+    // margin: auto auto auto 79px;
+    padding: 150px 80px;
+    width: auto;
+
 
 
     .sloganLogo {
@@ -132,14 +135,14 @@ header{
     
     .h1 {
       font-size: 80px;
-      font-style: normal;
       font-weight: 600;
       line-height: 93px; /* 115.904% */
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.945);
+      width: auto;
     }
     
     .righrLogo{
-      margin-left: 365px
+      
     }
     
     .btn {
@@ -148,8 +151,9 @@ header{
       padding: 18px 18px;
       justify-content: center;
       align-items: center;
+      margin: 0 auto;
       @include colorBackgroundBlue;
-      margin-left: 365px;
+      // margin-left: 365px;
       border-radius: 22px;
       font-size: 22px;
       margin-top: 68px;
@@ -1369,4 +1373,65 @@ footer{
   }
 }
 
+
+///////////////////Бургер меню
+
+.burger-btn {
+  display: none;
+  width: 30px;
+  height: 25px;
+  // display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  // z-index: 999;
+  span {
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 35%;
+  height: auto;
+  background: linear-gradient(to bottom right, #e0f0ff, #e0f5d8);
+  transition: right 0.3s ease;
+  padding: 60px 20px;
+  z-index: 998;
+  border-radius: 0 0 0 20px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      margin: 20px 0;
+      a {
+        font-size: 18px;
+        color: #000;
+        text-decoration: none;
+        border-bottom: 1px solid #000;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &.open {
+    right: 0;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 0px;
+    right: 60px;
+    background: none;
+    border: none;
+    font-size: 52px;
+    cursor: pointer;
+  }
+}
 
