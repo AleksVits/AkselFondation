@@ -1,0 +1,666 @@
+$color-white: #F8F9FA;
+$color-black: #444;
+$color-blue:  #2483C4;
+$color-yellow: #E9CC3F;
+
+
+
+//////////////////////////////Адаптація 
+
+@media (max-width: 1425px) {
+    .mision {
+        // margin-top: 165px;
+        display: flex;
+
+        justify-content: center;
+        // width: 100%;
+        // position: relative;
+        flex-direction: column;
+
+    }
+
+      .blockMision1 {
+        width: 60%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+      }
+      .text1Mision1 {
+        width: 700px;
+        font-size: 22px;
+        }
+        .img1Mision {
+            width: 100%;
+            height: 100%;
+        }
+
+      .blockMision2 {
+        width: 60%;
+        height: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 50px auto;
+      }
+      .text1Mision2 {
+        width: 700px;
+        font-size: 22px;
+        margin-right: 30px;
+        margin-top: 0px;
+        margin-left: 40px;
+        }
+
+      .gasloMision {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center
+      }
+      .gasloMision1 {
+        margin-left: 0;
+      }
+  }
+
+  @media (max-width: 1400px) {
+    .black {
+        display: none;
+        margin-top: 200px;
+        width: 100%;
+        height: 1000px;
+        background-color: black;
+        overflow: hidden;
+      }
+}
+
+@media (max-width: 1386px) {
+    .blocks {
+        width: auto;
+        height: auto;
+        margin-top: 19px;
+        margin-left: 350px;
+        // display: block;
+      }
+
+      .Zbir {
+        gap: 30px;
+      }
+
+      .blockZbir {
+        width: 600px;
+      }
+  }
+
+  @media (max-width: 1348px) {
+  .dopomoga {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 187px;
+    .aboutProFond {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 52px;
+        font-weight: 400;
+        line-height: 39px; /* 75% */
+        text-transform: uppercase;
+        color: $color-blue;
+        margin-bottom: 65px;
+        text-decoration: none;
+      } 
+    }
+    .dopomoga1 {
+        background: linear-gradient(rgba(0, 0, 0, 0.267), rgba(0, 0, 0, 0.404)),
+        url('Img/dopomogaImg.jpg');
+        background-size: cover; /* подгонка изображения */
+        background-position: center; /* центрирование */
+        background-repeat: no-repeat; /* отключить повтор */
+        width: 100%;
+        height: auto;
+        padding: 50px;
+        color: $color-white;
+      }
+
+      .textdopomoga1 {
+        margin-top: 10px;
+        font-size: 36px;
+      }
+      .textdopomoga2 {
+        font-size: 30px;
+      }      
+
+      .textLogo {
+        position: absolute;
+        top: 200px;
+        @include colorWhite;
+        margin: auto auto auto 79px;
+    
+    
+        .sloganLogo {
+          font-size: 44px;
+          font-style: italic;
+          font-weight: 200;
+          line-height: 72px;
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.945);
+    
+        }
+        
+        .h1 {
+          font-size: 60px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 93px; /* 115.904% */
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.945);
+        }
+        
+        .righrLogo{
+          margin-left: 365px
+        }
+        
+        .btn {
+          display: flex;
+          width: 349px;
+          padding: 18px 18px;
+          justify-content: center;
+          align-items: center;
+          @include colorBackgroundBlue;
+          margin-left: 365px;
+          border-radius: 22px;
+          font-size: 22px;
+          margin-top: 68px;
+          transition: transform 0.5s ease;
+          text-transform: uppercase;
+          letter-spacing: 4.5px; // или больше — например, 2px для выразительности
+        }
+      }
+
+}
+  
+  @media (max-width: 1325px) {
+    .blocks {
+        margin-top: 19px;
+        margin-left: 300px;
+        // display: block;
+      }
+  }
+
+  @media (max-width: 1270px) {
+    .blockZbir {
+        margin-top: 30px;
+        position: relative;
+        width: 525px;
+        height: 250px;
+    }
+    .textZbir {
+        margin: 30px auto;
+        font-size: 30px;
+        font-weight: 400;
+        width: 400px;
+      }
+      .BigText {
+        position: absolute;
+        width: 700px;
+        top: 50px;
+        left: 50%;        /* Смещаем левую границу на 50% от ширины родителя */
+        transform: translate(-50%, -50%); 
+      
+      }
+  }
+
+  @media (max-width: 1250px) {
+    .blocks {
+        margin-top: 19px;
+        margin-left: 250px;
+        // display: block;
+      }
+  }
+
+  @media (max-width: 1245px){
+    .contacts {
+        margin-top: 358px;
+        .aboutProFond {
+            text-decoration: none;
+          }
+      }
+      
+
+
+    .contactsCatd {
+        width: auto;
+        height: 743px;
+        margin-left: auto;
+      }
+
+      .contactName{
+        font-size: 52px;
+        font-weight: 400;
+        line-height: 18px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+        // margin-left: 5%;
+        margin-bottom: 65px;
+        text-decoration: underline;
+        color: $color-blue;
+      }
+
+  }
+
+  @media (max-width: 1230px) {
+
+      .blocks {
+        margin-top: 19px;
+        margin-left: 350px;
+        display: inline-block;
+      }
+      
+      .blocksVertical {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .block1 {
+        margin-top: 0;
+        margin-left: 30px;
+      }
+      .block2 {
+        margin-top: 0;
+        margin-left: 30px;
+      }
+
+      .statistic {
+      margin-top: 150px;
+      }
+
+        .numbrs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+          }
+
+  }
+
+  @media (max-width: 1200px){
+    .Zbir {
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        gap: 0px;
+        margin-top: 150px;
+        margin-right: 30px;
+      }
+
+      .blocksZbirVertical {
+        color: $color-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+        height: auto;
+      }
+      .blockZbir {
+        margin-top: 30px;
+        position: relative;
+        width: 100%;
+        height: 250px;
+      }
+
+      .textZbir1 {
+        font-size: 18px;
+        font-weight: 400;
+        // display: flex;
+        margin-left: 15%;
+        margin-right: 15%;
+        width: 70%;        
+        margin-top: 77px;
+      }
+      .textZbir2 {
+        font-size: 18px;
+        font-weight: 400;
+        // display: flex;
+        margin-left: 15%;
+        margin-right: 15%;
+        width: 65%;         
+        margin-top: 23px;
+      }
+      
+      .priseZbir1 {
+        font-size: 27px;
+        font-weight: 600;
+        line-height: 46px; 
+        
+        // display: flex;
+        margin-left: 15%;
+        margin-right: 15%;
+        width: 70%;    
+        margin-top: 56px;
+      }
+
+
+
+      .blockZbir1 {
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+        height: auto;
+        margin-top: 150px;
+
+      }
+  }
+
+  @media (max-width: 1040px) {
+    .statisth3 {
+        // margin-left: 100px;
+        margin-right: 30px;
+        margin-left: 30px;
+        font-size: 33px;
+        // font-style: normal;
+        font-weight: 300;
+        // line-height: normal;
+      }
+
+    .numbrs {
+        padding: 0px;
+        display: flex;
+        flex-wrap: wrap;            /* Разрешаем перенос элементов */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* Ширину можно настроить под нужды макета */
+        width: 90%;
+      }
+      
+      .number1,
+      .number2,
+      .number3 {
+        flex: 0 0 20%;           /* Первые три займут примерно по одной трети строки */
+      }
+      
+      .number4,
+      .number5 {
+        margin-top: 20px;
+        flex: 0 0 40%;              /* Последние два – по половине строки (будут во второй строке) */
+      }
+}
+
+  @media (max-width: 1030px) {
+    .blocks {
+        // margin-top: 19px;
+        margin-left: 300px;
+        // display: inline-block;
+      }
+
+}
+
+@media (max-width: 970px) {
+    .blocks {
+        // margin-top: 19px;
+        margin-left: 250px;
+        // display: inline-block;
+      }
+      .textsContact{
+        width: 433px;
+        margin-left: 60px;
+        padding-top: 50px;
+        text-align: center;
+      }
+
+      .linksFooter {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        margin-left: 100px;
+
+      }
+      .linkTel {
+        margin-left: 20px;
+        margin-top: 60px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .linkMail {
+        margin-top: 40px;
+        margin-left: 20px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .linkFacebook {
+        margin-top: 40px;
+        margin-left: 20px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 22px;
+      }
+
+      .btnArrow {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px; /* 142.857% */
+        width: 120px;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 40px;
+        right: 33px;
+      }
+}
+
+@media (max-width: 930px) {
+    .blocks {
+        // margin-top: 19px;
+        margin-left: 230px;
+        // display: inline-block;
+      }
+
+      .textsContact{
+        // font-size: 22px;
+        width: 433px;
+        margin-left: 30px;
+        padding-top: 30px;
+        text-align: center;
+      }
+
+      .contactsCatd {
+        height: 643px;
+      }
+
+}
+
+@media (max-width: 899px) {
+    .blocks {
+        // margin-top: 19px;
+        margin-left: 210px;
+        // display: inline-block;
+      }
+
+}
+
+@media (max-width: 885px) {
+
+    .textsContact{
+        width: 433px;
+        // margin-left: 80px;
+        padding: 50px 20px 20px;
+        text-align: center;
+        background-color: #f8f9face;
+        border-radius: 20px;
+        // padding: 0px;
+        margin: 50px;
+    }
+      
+}
+
+@media (max-width: 880px){
+    .paragrapg1 {
+      top: -60%;
+      left: 50px;
+      }
+      
+      .paragrapg2 {
+        top: 90%;
+        right: 100px;
+      }
+}
+
+@media (max-width: 875px) {
+    .blocks {
+        // margin-top: 19px;
+        margin-left: 190px;
+        // display: inline-block;
+      }
+
+}
+
+@media (max-width: 865px) {
+
+    .about {
+        // margin-top: 170px;
+        display: flex;
+      }
+
+      .logoAbout{
+        position: absolute;
+        top: 100px;
+        left: 0;
+        z-index: -1;
+        max-width: 100%;
+      }
+
+      .proFond{
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        font-size: 53px;
+        font-weight: 400;
+        width: 550px;
+        color: $color-blue;
+        text-decoration: none;
+      }
+      .nashaMisia{
+        top: -50px;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        font-size: 53px;
+        font-weight: 400;
+        width: 550px;
+        color: $color-blue;
+        text-decoration: none;
+      }
+
+    .blocks {
+        // margin-top: 19px;
+        // display: flex;
+        margin: 65px auto 0;
+        // display: inline-block;
+      }
+      
+      .blocksVertical {
+        display: block;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .block1 {
+        width: 90%;
+        margin-left: 55px;
+        margin-right: 55px;
+        margin-top: 0;
+        margin-bottom: 30px;
+        padding-bottom: 50px;
+        height: auto;
+      }
+      .block2 {
+        margin-top: 0;
+        width: 90%;
+        margin-left: 55px;
+        margin-right: 55px;
+        padding-bottom: 50px;
+        height: auto;
+      }
+
+      .blocksHorizontal {
+        display: block;
+      }
+      .block3 {
+        margin-bottom: 30px;
+        width: 90%;
+        margin-left: 55px;
+        margin-right: 55px;
+        padding-bottom: 50px;
+        height: auto;
+      }
+
+      .block4 {
+        margin-bottom: 30px;
+        width: 90%;
+        margin-left: 55px;
+        margin-right: 55px;
+        padding-bottom: 50px;
+        height: auto;
+      }
+}
+
+@media (max-width: 800px) {
+    .contactsCatd {
+        height: 543px;
+      }
+}
+
+
+
+@media (max-width: 613px){
+    .paragrapg1 {
+      top: -60%;
+      left: 50px;
+      }
+      
+      .paragrapg2 {
+        top: 90%;
+        right: 10%;
+      }
+      .textZaklik {
+        font-size: 50px;
+      }
+}
+
+
+
+
+//   .blocks {
+//     width: 952px;
+//     height: 432px;
+//     margin-top: 19px;
+//     margin-left: 409px;
+//     display: flex;
+//   }
