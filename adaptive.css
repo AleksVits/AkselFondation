@@ -43,9 +43,14 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
+    text-align: center;
   }
   .gasloMision1 {
     margin-left: 0;
+    font-size: calc(24px + 10 * (100vw - 320px) / 960);
+  }
+  .gasloMision2 {
+    font-size: calc(24px + 10 * (100vw - 320px) / 960);
   }
 }
 @media (max-width: 1400px) {
@@ -139,12 +144,11 @@
     font-weight: 400;
     width: 400px;
   }
-  .BigText {
-    position: absolute;
-    width: 700px;
-    top: 50px;
-    left: 50%; /* Смещаем левую границу на 50% от ширины родителя */
-    transform: translate(-50%, -50%);
+  .Zbir .aboutProFond {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
   }
 }
 @media (max-width: 1250px) {
@@ -208,6 +212,19 @@
     justify-content: center;
     align-items: center;
     width: 50%;
+  }
+  .textdopomoga1 {
+    margin-top: 80px;
+    margin-left: 37px;
+    font-size: calc(22px + 16 * (100vw - 320px) / 960);
+    font-style: italic;
+    font-weight: 500;
+  }
+  .textdopomoga2 {
+    font-size: calc(18px + 16 * (100vw - 320px) / 960);
+    font-weight: 400;
+    line-height: 76px;
+    line-height: 70px;
   }
 }
 @media (max-width: 1200px) {
@@ -316,9 +333,6 @@
     padding-right: 10px;
     margin-bottom: 20px;
   }
-  .h1Logo {
-    font-size: 90px;
-  }
   .btn {
     display: block;
     width: 349px;
@@ -403,12 +417,6 @@
   .contactsCatd {
     height: 643px;
   }
-  .h1Logo {
-    font-size: 80px;
-  }
-  .righrLogo {
-    margin-left: 1px;
-  }
   .LogoDiv {
     height: auto;
   }
@@ -456,6 +464,7 @@
 @media (max-width: 865px) {
   .about {
     display: flex;
+    flex-direction: column;
   }
   .logoAbout {
     position: absolute;
@@ -465,25 +474,40 @@
     max-width: 100%;
   }
   .proFond {
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-size: 53px;
     font-weight: 400;
-    width: 550px;
     color: #2483C4;
     text-decoration: none;
+    line-height: 46px;
   }
   .nashaMisia {
-    top: -50px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-size: 53px;
     font-weight: 400;
-    width: 550px;
     color: #2483C4;
     text-decoration: none;
+    line-height: 46px;
+    margin-bottom: 40px;
+  }
+  .galText {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 53px;
+    font-weight: 400;
+    color: #2483C4;
+    text-decoration: none;
+    line-height: 46px;
+    margin-bottom: 40px;
   }
   .blocks {
     margin: 65px auto 0;
@@ -538,29 +562,46 @@
     padding: 150px 0px;
     width: auto;
   }
-  .h1Logo {
-    font-size: 70px;
+  .img1Mision {
+    display: none;
+  }
+  .blockMision1 {
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: 0;
+    padding: 0 50px;
+  }
+  .text1Mision1 {
+    width: auto;
+    padding: 0;
+  }
+  .blockMision2 {
+    margin-left: 0px;
+    width: auto;
+    display: flex;
+    padding: 0 50px;
+  }
+  .text1Mision2 {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .img1Mision2 {
+    display: none;
   }
 }
 @media (max-width: 800px) {
   .contactsCatd {
     height: 543px;
   }
-}
-@media (max-width: 759px) {
-  .h1Logo {
-    font-size: 65px;
-  }
-}
-@media (max-width: 745px) {
-  .h1Logo {
-    font-size: 60px;
-  }
-}
-@media (max-width: 675px) {
-  .h1Logo {
-    font-size: 50px;
-    margin-bottom: -25px;
+  .BigText {
+    font-size: 53px;
+    font-weight: 400;
+    color: #2483C4;
+    text-decoration: none;
+    line-height: 46px;
+    margin-bottom: 40px;
   }
 }
 @media (max-width: 613px) {
@@ -577,10 +618,6 @@
   }
 }
 @media (max-width: 588px) {
-  .h1Logo {
-    font-size: 45px;
-    margin-bottom: -25px;
-  }
   .apanotationTextLogo {
     bottom: 50px;
     right: 81px;
