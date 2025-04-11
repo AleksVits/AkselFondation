@@ -286,6 +286,11 @@
     margin-top: 150px;
   }
 }
+@media (max-width: 780px) {
+  .btn {
+    width: 200px;
+  }
+}
 @media (max-width: 1040px) {
   .statisth3 {
     margin-right: 30px;
@@ -332,17 +337,6 @@
     text-align: end;
     padding-right: 10px;
     margin-bottom: 20px;
-  }
-  .btn {
-    display: block;
-    width: 349px;
-    padding: 18px 18px;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    margin-left: 0px;
-    font-size: 22px;
-    margin-top: 68px;
   }
 }
 @media (max-width: 970px) {
@@ -438,7 +432,7 @@
 }
 @media (max-width: 885px) {
   .textsContact {
-    width: 433px;
+    width: 80%;
     padding: 50px 20px 20px;
     text-align: center;
     background-color: rgba(248, 249, 250, 0.8078431373);
@@ -520,9 +514,9 @@
     margin-bottom: 30px;
   }
   .block1 {
-    width: 90%;
-    margin-left: 55px;
-    margin-right: 55px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: 0;
     margin-bottom: 30px;
     padding-bottom: 50px;
@@ -530,9 +524,9 @@
   }
   .block2 {
     margin-top: 0;
-    width: 90%;
-    margin-left: 55px;
-    margin-right: 55px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     padding-bottom: 50px;
     height: auto;
   }
@@ -541,17 +535,17 @@
   }
   .block3 {
     margin-bottom: 30px;
-    width: 90%;
-    margin-left: 55px;
-    margin-right: 55px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     padding-bottom: 50px;
     height: auto;
   }
   .block4 {
     margin-bottom: 30px;
-    width: 90%;
-    margin-left: 55px;
-    margin-right: 55px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     padding-bottom: 50px;
     height: auto;
   }
@@ -591,6 +585,12 @@
     display: none;
   }
 }
+@media (max-width: 844px) {
+  .apanotationTextLogo {
+    color: red;
+    font-size: 2rem;
+  }
+}
 @media (max-width: 800px) {
   .contactsCatd {
     height: 543px;
@@ -602,6 +602,22 @@
     text-decoration: none;
     line-height: 46px;
     margin-bottom: 40px;
+  }
+}
+@media (max-width: 710px) {
+  .on {
+    display: none;
+  }
+  .off {
+    display: block;
+    position: absolute;
+    top: -140px;
+    color: #2483C4;
+  }
+}
+@media (max-width: 675px) {
+  .sloganLogo {
+    display: none;
   }
 }
 @media (max-width: 613px) {
@@ -617,15 +633,11 @@
     font-size: 50px;
   }
 }
-@media (max-width: 588px) {
-  .apanotationTextLogo {
-    bottom: 50px;
-    right: 81px;
-    font-size: 16px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 172%; /* 27.52px */
-    text-align: right;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.945);
+@media (max-width: 488px) {
+  .btnArrow {
+    display: none;
+  }
+  .linksFooter {
+    margin-left: 50px;
   }
 }/*# sourceMappingURL=adaptive.css.map */

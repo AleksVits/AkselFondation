@@ -58,7 +58,8 @@ header .nav li:hover::after {
 }
 
 .h1Logo {
-  font-size: 80px;
+  font-size: clamp(39px, 8vw, 80px);
+  line-height: 140%;
 }
 
 .line {
@@ -77,11 +78,11 @@ header .nav li:hover::after {
 }
 .LogoDiv .textLogo {
   color: #F8F9FA;
-  padding: 150px 80px;
+  padding: 150px 5%;
   width: auto;
 }
 .LogoDiv .textLogo .sloganLogo {
-  font-size: 44px;
+  font-size: clamp(44px, 8vw, 12px);
   font-style: italic;
   font-weight: 200;
   line-height: 72px;
@@ -96,7 +97,7 @@ header .nav li:hover::after {
 }
 .LogoDiv .textLogo .btn {
   display: flex;
-  width: 349px;
+  width: 275px;
   padding: 18px 18px;
   justify-content: center;
   align-items: center;
@@ -105,6 +106,7 @@ header .nav li:hover::after {
   border-radius: 22px;
   font-size: 22px;
   margin-top: 68px;
+  margin-bottom: 50px;
   transition: transform 0.5s ease;
   text-transform: uppercase;
   letter-spacing: 4.5px;
@@ -116,9 +118,9 @@ header .nav li:hover::after {
 .LogoDiv .apanotationTextLogo {
   color: #F8F9FA;
   position: absolute;
-  bottom: 50px;
-  right: 81px;
-  font-size: 16px;
+  bottom: 5%;
+  right: 5%;
+  font-size: clamp(12px, 12px + 0.3125vw, 16px);
   font-style: italic;
   font-weight: 400;
   line-height: 172%; /* 27.52px */
@@ -250,7 +252,7 @@ main {
 
 .statistic {
   width: 100%;
-  height: auto;
+  padding: 20px 0;
   margin-top: 248px;
   background-color: #2483C4;
   color: #F8F9FA;
@@ -264,6 +266,10 @@ main {
 
 .krilo {
   margin-top: 20px;
+}
+
+.off {
+  display: none;
 }
 
 .statisth3 {
@@ -283,6 +289,7 @@ main {
   text-align: center;
   width: 50%;
   gap: 5%;
+  position: relative;
 }
 
 .number1 {
@@ -732,16 +739,17 @@ h4 {
   margin: 53px auto;
   background-color: #F8F9FA;
   color: black;
-  width: 374px;
+  width: 60%;
   height: 77px;
   padding: 14px;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 16px; /* 75% */
   display: flex;
+  text-align: center;
   transition: transform 0.3s ease;
 }
 
@@ -983,8 +991,11 @@ footer {
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: 35px auto 0 auto;
+  padding-bottom: 10px;
 }
 
 .AleksVits {
@@ -1213,7 +1224,7 @@ footer {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 35%;
+  width: 50%;
   height: auto;
   background: linear-gradient(to bottom right, #e0f0ff, #e0f5d8);
   transition: right 0.3s ease;

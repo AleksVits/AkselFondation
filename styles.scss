@@ -99,7 +99,8 @@ header{
 }
 
   .h1Logo{
-    font-size: 80px;
+    font-size: clamp(39px, 8vw, 80px);
+    line-height: 140%;
   }
 
 .line{
@@ -122,13 +123,15 @@ header{
     // top: 200px;
     color: $color-white;
     // margin: auto auto auto 79px;
-    padding: 150px 80px;
+    padding: 150px 5%;
     width: auto;
 
 
 
     .sloganLogo {
-      font-size: 44px;
+      // font-size: 44px;
+      font-size: clamp(44px, 8vw, 12px);
+
       font-style: italic;
       font-weight: 200;
       line-height: 72px;
@@ -150,7 +153,7 @@ header{
     
     .btn {
       display: flex;
-      width: 349px;
+      width: 275px;
       padding: 18px 18px;
       justify-content: center;
       align-items: center;
@@ -160,6 +163,7 @@ header{
       border-radius: 22px;
       font-size: 22px;
       margin-top: 68px;
+      margin-bottom: 50px;
       transition: transform 0.5s ease;
       text-transform: uppercase;
       letter-spacing: 4.5px; // или больше — например, 2px для выразительности
@@ -172,11 +176,12 @@ header{
   }
   
   .apanotationTextLogo {
-    @include colorWhite;
+    color: $color-white;
     position: absolute;
-    bottom: 50px;
-    right: 81px;
-    font-size: 16px;
+    bottom: 5%;
+    right: 5%;
+    font-size: clamp(12px, calc(12px + 0.3125vw), 16px);
+
     font-style: italic;
     font-weight: 400;
     line-height: 172%; /* 27.52px */
@@ -320,7 +325,8 @@ box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.30) inset, -1px -1px 2px 0px r
 /////////////////////////Розділ Ми вже допомогли
 .statistic {
   width: 100%;
-  height: auto;
+  padding: 20px 0;
+  // min-height: 380px;
   margin-top: 248px;
   background-color: $color-blue;
   color: $color-white;
@@ -333,6 +339,10 @@ box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.30) inset, -1px -1px 2px 0px r
 }
 .krilo{
   margin-top: 20px;
+}
+
+.off{
+  display: none;
 }
 
 .statisth3 {
@@ -352,6 +362,7 @@ box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.30) inset, -1px -1px 2px 0px r
   text-align: center;
   width: 50%;
   gap: 5%;
+  position: relative;
 }
 
 .number1 {
@@ -842,16 +853,17 @@ h4{
   margin: 53px auto;
   background-color: $color-white;
   color: black;
-  width: 374px;
+  width: 60%;
   height: 77px;
   padding: 14px;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 16px; /* 75% */
   display: flex;
+  text-align: center;
   transition: transform 0.3s ease;
 
 }
@@ -1115,8 +1127,12 @@ footer{
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   display: flex;
+  flex-direction: column;
+
   justify-content: center;
+  align-items: center;
   margin: 35px auto 0 auto;
+  padding-bottom: 10px;
 }
 
 
@@ -1388,7 +1404,7 @@ footer{
   position: fixed;
   top: 0;
   right: -100%;
-  width: 35%;
+  width: 50%;
   height: auto;
   background: linear-gradient(to bottom right, #e0f0ff, #e0f5d8);
   transition: right 0.3s ease;
