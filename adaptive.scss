@@ -183,9 +183,6 @@ $color-yellow: #E9CC3F;
           margin: 0;
         }
       }
-      .BigText {
-      
-      }
   }
 
   @media (max-width: 1250px) {
@@ -672,6 +669,7 @@ $color-yellow: #E9CC3F;
         margin-bottom: 30px;
         padding-bottom: 50px;
         height: auto;
+        border-radius: 20px;
       }
 
       .block2 {
@@ -802,6 +800,32 @@ $color-yellow: #E9CC3F;
   .sloganLogo{
     display: none;
   }
+}
+
+@media (max-width: 650px) {
+  .proFond{
+    display: none;
+  }
+  .nashaMisia{
+    display: none;
+  }
+  .galText{
+    display: none;
+  }
+  .contactName{
+    display: none;
+  }
+  .Zbir{
+    .aboutProFond{
+      display: none;
+    }
+  }
+  .dopomoga{
+    .aboutProFond{
+      display: none;
+    }
+  }
+
 }
 
 @media (max-width: 613px){

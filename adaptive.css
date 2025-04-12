@@ -521,6 +521,7 @@
     margin-bottom: 30px;
     padding-bottom: 50px;
     height: auto;
+    border-radius: 20px;
   }
   .block2 {
     margin-top: 0;
@@ -617,6 +618,26 @@
 }
 @media (max-width: 675px) {
   .sloganLogo {
+    display: none;
+  }
+}
+@media (max-width: 650px) {
+  .proFond {
+    display: none;
+  }
+  .nashaMisia {
+    display: none;
+  }
+  .galText {
+    display: none;
+  }
+  .contactName {
+    display: none;
+  }
+  .Zbir .aboutProFond {
+    display: none;
+  }
+  .dopomoga .aboutProFond {
     display: none;
   }
 }
