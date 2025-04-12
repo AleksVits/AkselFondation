@@ -798,6 +798,9 @@
     width: 95%;
     padding: 16px;
     border-radius: 16px;
+    height: auto;
+    max-height: 90vh;
+    overflow-y: auto;
   }
   .tabs {
     flex-direction: column;
@@ -814,7 +817,6 @@
   .modal-right h3 {
     font-size: 20px;
     text-align: center;
-    margin-bottom: 10px;
   }
   .input-row {
     flex-direction: column;
@@ -865,6 +867,9 @@
     top: 8px;
     right: 8px;
     font-size: 26px;
+  }
+  .logoPayPhon {
+    display: none;
   }
 }
 @media (max-width: 600px) {
