@@ -34,7 +34,7 @@
     width: 700px;
     font-size: 22px;
     margin-right: 30px;
-    margin-top: 0px;
+    margin-top: 0;
     margin-left: 40px;
   }
   .gasloMision {
@@ -217,7 +217,6 @@
     margin-top: 80px;
     margin-left: 37px;
     font-size: calc(22px + 16 * (100vw - 320px) / 960);
-    font-style: italic;
     font-weight: 500;
   }
   .textdopomoga2 {
@@ -232,7 +231,7 @@
     display: flex;
     flex-direction: column;
     flex-direction: column-reverse;
-    gap: 0px;
+    gap: 0;
     margin-top: 150px;
     margin-right: 30px;
   }
@@ -286,9 +285,89 @@
     margin-top: 150px;
   }
 }
-@media (max-width: 780px) {
-  .btn {
-    width: 200px;
+@media (max-width: 1100px) {
+  .tab-btn {
+    display: block;
+  }
+  .modal-content {
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 20px;
+    background: #fff;
+  }
+  .modal-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  .tab-btn {
+    flex: 1;
+    padding: 10px;
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    background-color: #f2f2f2;
+    transition: 0.3s ease;
+  }
+  .tab-btn.active {
+    background-color: #fff;
+    border-bottom: 2px solid #000;
+  }
+  .tab-content {
+    display: none;
+  }
+  .tab-content.active {
+    display: block;
+  }
+  .modal-left, .modal-right {
+    width: 100%;
+  }
+  .iban-copy {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  .iban-copy input {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+  }
+  .iban-copy button {
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+  .qr {
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
+    display: block;
+  }
+  .purpose {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .support-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .close-modal {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 }
 @media (max-width: 1040px) {
@@ -299,24 +378,23 @@
     font-weight: 300;
   }
   .numbrs {
-    padding: 0px;
+    padding: 0;
     display: flex;
-    flex-wrap: wrap; /* Разрешаем перенос элементов */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* Ширину можно настроить под нужды макета */
     width: 90%;
   }
   .number1,
   .number2,
   .number3 {
-    flex: 0 0 20%; /* Первые три займут примерно по одной трети строки */
+    flex: 0 0 20%;
   }
   .number4,
   .number5 {
     margin-top: 20px;
-    flex: 0 0 40%; /* Последние два – по половине строки (будут во второй строке) */
+    flex: 0 0 40%;
   }
 }
 @media (max-width: 1030px) {
@@ -325,7 +403,7 @@
   }
   .textLogo {
     color: #F8F9FA;
-    padding: 0px 0px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -352,7 +430,7 @@
   .linksFooter {
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    gap: 0;
     margin-left: 100px;
   }
   .linkTel {
@@ -554,7 +632,7 @@
 @media (max-width: 845px) {
   .textLogo {
     color: #F8F9FA;
-    padding: 150px 0px;
+    padding: 150px0;
     width: auto;
   }
   .img1Mision {
@@ -572,7 +650,7 @@
     padding: 0;
   }
   .blockMision2 {
-    margin-left: 0px;
+    margin-left: 0;
     width: auto;
     display: flex;
     padding: 0 50px;
@@ -586,12 +664,6 @@
     display: none;
   }
 }
-@media (max-width: 844px) {
-  .apanotationTextLogo {
-    color: red;
-    font-size: 2rem;
-  }
-}
 @media (max-width: 800px) {
   .contactsCatd {
     height: 543px;
@@ -603,6 +675,11 @@
     text-decoration: none;
     line-height: 46px;
     margin-bottom: 40px;
+  }
+}
+@media (max-width: 780px) {
+  .btn {
+    width: 200px;
   }
 }
 @media (max-width: 710px) {
@@ -653,12 +730,188 @@
   .textZaklik {
     font-size: 50px;
   }
+  .blockZbir1 {
+    margin-top: 100px;
+  }
+  .blockZbir1 h4 {
+    font-size: 32px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+  }
+  .blockZbir1 .textZbir1 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 10%;
+    width: auto;
+    margin-top: 50px;
+  }
+  .blockZbir1 .textZbir2 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 10%;
+    width: auto;
+    margin-top: 23px;
+  }
+  .blockZbir1 .priseZbir1 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-left: 10%;
+    margin-top: 30px;
+  }
+  .blockZbir1 .fs600 {
+    font-size: 24px;
+  }
+  .blockZbir1 .btnZbir1 {
+    height: auto;
+    font-size: 16px;
+  }
+  .textZbir {
+    margin: 50px auto;
+    font-size: 18px;
+    width: auto;
+  }
+  .priseZbir {
+    font-size: 16px;
+  }
+  .zbir {
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .blockZbir:hover .textZbir {
+    font-size: 22px;
+    transition: 0.7s ease;
+  }
+  .blockZbir:hover .priseZbir {
+    font-size: 20px;
+    transition: 0.7s ease;
+  }
+}
+@media (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+    padding: 16px;
+    border-radius: 16px;
+  }
+  .tabs {
+    flex-direction: column;
+    gap: 8px;
+    border-bottom: none;
+  }
+  .tab-btn {
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 12px;
+  }
+  .modal-left h3,
+  .modal-right h3 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .input-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .input-row input {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+  }
+  .quick-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .quick-buttons button {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .support-btn {
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
+  }
+  .iban-copy {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .iban-copy input {
+    width: 100%;
+    font-size: 16px;
+    padding: 8px;
+  }
+  .iban-copy button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .qr {
+    max-width: 100%;
+    height: auto;
+  }
+  .purpose {
+    font-size: 14px;
+    margin-top: 12px;
+    text-align: center;
+  }
+  .modal .close-modal {
+    top: 8px;
+    right: 8px;
+    font-size: 26px;
+  }
+}
+@media (max-width: 600px) {
+  .dopomoga {
+    margin-top: 100px;
+  }
+  .dopomoga .textdopomoga1 {
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .dopomoga .textdopomoga2 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 45px;
+  }
+  .dopomoga .textsDopomoga4 {
+    margin: 40px 0 40px 10px;
+  }
 }
 @media (max-width: 488px) {
   .btnArrow {
-    display: none;
+    font-size: 14px;
+    width: 60px;
+    height: 60px;
   }
   .linksFooter {
     margin-left: 50px;
+  }
+}
+@media (max-width: 400px) {
+  .dopomoga {
+    margin-top: 100px;
+  }
+  .dopomoga .textdopomoga1 {
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .dopomoga .textdopomoga2 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 45px;
+  }
+  .dopomoga .textsDopomoga4 {
+    margin: 40px 0 40px 10px;
   }
 }/*# sourceMappingURL=adaptive.css.map */

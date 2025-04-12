@@ -31,7 +31,8 @@
           <ul>
             <li><a href="#about">ПРО НАС</a></li>
             <li><a href="#mission">МІСІЯ</a></li>
-            <li><a href="#help">ЯК ДОПОМОГТИ</a></li>
+            <li><a href="#gallery">ГАЛЕРЕЯ</a></li>
+            <li><a href="#dopomoga">ЯК ДОПОМОГТИ</a></li>
             <li><a href="#pay"><strong>ЗБІР</strong></a></li>
             <li><a href="#contacts">КОНТАКТИ</a></li>
           </ul>
@@ -60,7 +61,7 @@
   </header>
 
   <main>
-    <section class="about">
+    <section class="about" id="about">
       <img class="logoAbout" src="Img/logoAbout.png">
       <p class="aboutProFond proFond">Про фонд «Аксель»</p>
       <div class="blocks">
@@ -120,7 +121,7 @@
       </div>
     </section>
 
-    <section class="mision">
+    <section class="mision" id="mission">
       <h2 class="aboutProFond nashaMisia">Наша місія</h2>
        <div class="blockMision1">
         <p class="text1Mision1">Ми <strong class="f400">допомагаємо</strong> тим, хто бореться — і тим, хто виживає. <br><br> <strong class="f400">Закриваємо</strong>  офіційні запити військових. <br><br> <strong class="f400">Забезпечуємо</strong>  необхідним підрозділи, які боронять Херсонщину та інші регіони.</p>
@@ -136,14 +137,13 @@
        </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="gallery">
       <h2 class="aboutProFond galText">Галерея</h2>
       <div class="gallery-scroll">
-        <img src="Img/galery/photo1.jpg" alt="">
         <img src="Img/galery/photo2.jpg" alt="">
+        <img src="Img/galery/photo5.jpg" alt="">
         <img src="Img/galery/photo3.jpg" alt="">
         <img src="Img/galery/photo4.jpg" alt="">
-        <img src="Img/galery/photo5.jpg" alt="">
         <img src="Img/galery/photo6.jpg" alt="">
         <img src="Img/galery/photo7.jpg" alt="">
         <img src="Img/galery/photo8.jpg" alt="">
@@ -153,6 +153,7 @@
         <img src="Img/galery/photo12.jpg" alt="">
         <img src="Img/galery/photo13.jpg" alt="">
         <img src="Img/galery/photo14.jpg" alt="">
+        <img src="Img/galery/photo1.jpg" alt="">
       </div>
       <h2 class="galeryText">Миті нашої діяльності  <svg width="53" height="35" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
         <rect width="24" height="8" fill="#0057B7"/>
@@ -163,7 +164,7 @@
     
     
 
-    <section class="dopomoga">
+    <section class="dopomoga" id="dopomoga">
       <h2 class="aboutProFond">Як допомогти</h2>
       <div class="dopomoga1">
         <p class="textdopomoga1">Ви можете <strong class="yellow">стати</strong> частиною спільної справи:</p>
@@ -180,9 +181,6 @@
     <section class="black">
       <img class="logoBlack" src="Img/logoBlacs.png">
       <img src="Img/doluchis.png" class="textBlack">
-      <!-- <div class="btnBlack">
-        <a href="#pay">Долучись</a>
-      </div> -->
 
       <div class="btnBlack">
         <a href="#pay" aria-label="Долучись">
@@ -223,9 +221,7 @@
           <p class="textZbir2">Можна допомогти: <br>
             фінансово — через банку або картку
             передати ресурси (насіння, техніку, паливо)</p>
-            <p class="priseZbir1">Ціль: 500 000 грн <br>
-              Зібрано: 312 400 грн <br>
-              Залишилось: <strong class="fs600">187 600</strong> грн</p>
+            <p class="priseZbir1">Ціль: <strong class="fs600">500 000</strong> грн <br>
             <div class="btnZbir1">Долучитись до допомоги</div>
             <p class="aboutZbir">Звіт про кожен витрачений кошт — 
               публікуємо у Фейсбук</p>
@@ -240,24 +236,19 @@
       </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <h2 class="aboutProFond contactName">контакти</h2> 
+      
       <div class="contactsCatd">
         <img class="imgHand" src="Img/handContact.png" alt="">
         <div class="textsContact">
           <p class="nameCard">Благодійний фонд "Аксель"</p>
           <p class="gasloCard">Ми завжди поряд</p>
-        
+          
           <div class="links">
-            <a href="https://facebook.com/fondaksel" class="link linkF" target="_blank" rel="noopener noreferrer">
-              <span class="visually-hidden">Facebook</span></a>
-              <a href="mailto:fondaksel@gmail.com" class="link linkM">
-                <span class="visually-hidden">Email</span>
-              </a>
-              
-              <a href="tel:+380959465947" class="link linkP">
-                <span class="visually-hidden">Подзвонити</span>
-              </a>
+            <a href="https://facebook.com/fondaksel" class="link linkF" target="_blank" rel="noopener noreferrer"></a>
+            <a href="mailto:fondaksel@gmail.com" class="link linkM"></a>
+            <a href="tel:+380959465947" class="link linkP"></a>
           </div>
           
         <p class="aboutCards">Ми відкриті до співпраці, запитів, пропозицій і допомоги.</p>
@@ -282,7 +273,7 @@
       </div>
     </div>
     <div class="btnArrow"><a href="#header"><img class="imgArrowUp" src="icons/arrowUp.svg" alt=""></a> На гору</div>
-    <div class="textFooter">© 2025 Благодійний фонд "Аксель" | Всі права захищені | Розроблено: <a class="AleksVits" href="https://t.me/ALEKSVITS" target="_blank" rel="noopener noreferrer">@AleksVits</a></div>
+    <div class="textFooter">© 2025 Благодійний фонд "Аксель" | Всі права захищені <br> Розроблено: <a class="AleksVits" href="https://t.me/ALEKSVITS" target="_blank" rel="noopener noreferrer">@AleksVits</a></div>
   </footer>
 
 
@@ -292,50 +283,69 @@
       <button class="close-modal">&times;</button>
   
       <div class="modal-box">
-        <!-- Ліва частина -->
-        <div class="modal-left">
-          <h3>Підтримати цей збір</h3>
-          <div class="input-row">
-            <input type="number" placeholder="Введіть суму" />
-            <span>грн</span>
-          </div>
-          <div class="quick-buttons">
-            <button>+200 грн</button>
-            <button>+500 грн</button>
-            <button>+1000 грн</button>
-          </div>
-          <button class="support-btn">
-            Підтримати
-            <span class="arrow">→</span>
-          </button>
-          <img class="logoPayPhon" src="Img/logoPay.png">
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="card">Картка</button>
+          <button class="tab-btn" data-tab="bank">Реквізити</button>
         </div>
-  
-        <!-- Права частина -->
-        <div class="modal-right">
-          <img class="logoPayPhon" src="Img/logoPayBlackSmall.png">
-          <h3>Реквізити</h3>
-          <p class="sub">Банківський переказ по Україні</p>
-          <p><strong>Благодійний фонд «Аксель»</strong></p>
-          <p>ЄДРПОУ: 38188675</p>
-          <p>IBAN: UA723264610000026006300152419</p>
-          <p>код банку: 326461 АТ «Ощадбанк»</p>
-          <div class="iban-copy">
-            <input readonly value="UA723264610000026006300152419" />
-            <button title="Скопіювати">📋</button>
+      
+        <div class="tab-content active" id="card">
+          <div class="modal-left">
+            <h3>Підтримати цей збір</h3>
+            <div class="input-row">
+              <input type="number" placeholder="Введіть суму" />
+              <span>грн</span>
+            </div>
+            <div class="quick-buttons">
+              <button data-amount="200">+200 грн</button>
+              <button data-amount="500">+500 грн</button>
+              <button data-amount="1000">+1000 грн</button>
+            </div>
+              <button class="support-btn">
+              Підтримати
+              <span class="arrow">→</span>
+            </button>
+            <img class="logoPayPhon" src="Img/logoPay.png" alt="">
           </div>
-          <img class="qr" src="Img/QrCode.jpg" alt="QR код">
-          <p class="purpose">
-            <strong>Призначення платежу:</strong> Благодійний безповоротний внесок на інституційну спроможність фонду
-          </p>
+        </div>
+      
+        <div class="tab-content" id="bank">
+          <div class="modal-right">
+            <img class="logoPayPhon" src="Img/logoPayBlackSmall.png" alt="">
+            <h3>Реквізити</h3>
+            <p class="sub">Банківський переказ по Україні</p>
+            <p><strong>Благодійний фонд «Аксель»</strong></p>
+            <p>ЄДРПОУ: 38188675</p>
+            <p>IBAN: UA723264610000026006300152419</p>
+            <p>код банку: 326461 АТ «Ощадбанк»</p>
+            <div class="iban-copy">
+              <input readonly value="UA723264610000026006300152419" />
+              <button title="Скопіювати">📋</button>
+            </div>
+            <img class="qr" src="Img/QrCode.jpg" alt="QR код">
+            <p class="purpose">
+              <strong>Призначення платежу:</strong> Благодійний безповоротний внесок на інституційну спроможність фонду
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+        </div>
   
 
 
   <script>
+    // Плюс кнопки: додають суму до input
+const amountInput = document.querySelector('.modal-left input[type="number"]');
+const addButtons = document.querySelectorAll('.quick-buttons button');
+
+addButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const addValue = parseInt(btn.dataset.amount, 10);
+    const currentValue = parseInt(amountInput.value || '0', 10);
+    amountInput.value = currentValue + addValue;
+  });
+});
+
+
     document.addEventListener('DOMContentLoaded', () => {
   
       // Анімація появи
@@ -376,6 +386,23 @@
           modal.classList.remove('show');
         }
       });
+
+      // Вкладки в модалці
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Прибрати активні
+    tabButtons.forEach(b => b.classList.remove('active'));
+    tabContents.forEach(c => c.classList.remove('active'));
+
+    // Додати нові активні
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
+
   
       // Копіювання IBAN
       const copyBtn = modal.querySelector('.iban-copy button');
@@ -407,6 +434,16 @@ window.addEventListener('click', (e) => {
     mobileMenu.classList.remove('open');
   }
 });
+
+// Закривати меню після натискання на пункт
+const mobileLinks = document.querySelectorAll('#mobileMenu a');
+
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+  });
+});
+
 
   </script>
   

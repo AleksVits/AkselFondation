@@ -9,14 +9,9 @@ $color-yellow: #E9CC3F;
 
 @media (max-width: 1425px) {
     .mision {
-        // margin-top: 165px;
         display: flex;
-
         justify-content: center;
-        // width: 100%;
-        // position: relative;
         flex-direction: column;
-
     }
 
       .blockMision1 {
@@ -49,7 +44,7 @@ $color-yellow: #E9CC3F;
         width: 700px;
         font-size: 22px;
         margin-right: 30px;
-        margin-top: 0px;
+        margin-top:0;
         margin-left: 40px;
         }
 
@@ -87,7 +82,6 @@ $color-yellow: #E9CC3F;
         height: auto;
         margin-top: 19px;
         margin-left: 350px;
-        // display: block;
       }
 
       .Zbir {
@@ -139,10 +133,8 @@ $color-yellow: #E9CC3F;
       }      
 
       .textLogo {
-        // position: absolute;
         top: 200px;
         color: $color-white;
-        // margin: auto auto auto 79px;
         padding: 150px 80px;
       }
 }
@@ -153,7 +145,6 @@ $color-yellow: #E9CC3F;
         margin-left: 300px;
       }
 
-      
       .h1 {
         font-size: 40px;
         font-weight: 600;
@@ -189,7 +180,6 @@ $color-yellow: #E9CC3F;
     .blocks {
         margin-top: 19px;
         margin-left: 250px;
-        // display: block;
       }
   }
 
@@ -200,8 +190,6 @@ $color-yellow: #E9CC3F;
             text-decoration: none;
           }
       }
-      
-
 
     .contactsCatd {
         width: auto;
@@ -218,8 +206,6 @@ $color-yellow: #E9CC3F;
         align-items: center;
         justify-content: center;
         text-decoration: none;
-
-        // margin-left: 5%;
         margin-bottom: 65px;
         text-decoration: underline;
         color: $color-blue;
@@ -228,7 +214,6 @@ $color-yellow: #E9CC3F;
   }
 
   @media (max-width: 1230px) {
-
       .blocks {
         margin-top: 19px;
         margin-left: 350px;
@@ -267,7 +252,6 @@ $color-yellow: #E9CC3F;
             margin-top: 80px;
             margin-left: 37px;
             font-size: calc(22px + 16 * ((100vw - 320px) / (1280 - 320)));
-            font-style: italic;
             font-weight: 500;
           }
           .textdopomoga2 {
@@ -276,8 +260,6 @@ $color-yellow: #E9CC3F;
             line-height: 76px;
             line-height: 70px;
           }          
-
-
   }
 
   @media (max-width: 1200px){
@@ -285,7 +267,7 @@ $color-yellow: #E9CC3F;
         display: flex;
         flex-direction: column;
         flex-direction: column-reverse;
-        gap: 0px;
+        gap:0;
         margin-top: 150px;
         margin-right: 30px;
       }
@@ -311,7 +293,6 @@ $color-yellow: #E9CC3F;
       .textZbir1 {
         font-size: 18px;
         font-weight: 400;
-        // display: flex;
         margin-left: 15%;
         margin-right: 15%;
         width: 70%;        
@@ -320,7 +301,6 @@ $color-yellow: #E9CC3F;
       .textZbir2 {
         font-size: 18px;
         font-weight: 400;
-        // display: flex;
         margin-left: 15%;
         margin-right: 15%;
         width: 65%;         
@@ -331,15 +311,11 @@ $color-yellow: #E9CC3F;
         font-size: 27px;
         font-weight: 600;
         line-height: 46px; 
-        
-        // display: flex;
         margin-left: 15%;
         margin-right: 15%;
         width: 70%;    
         margin-top: 56px;
       }
-
-
 
       .blockZbir1 {
         margin-left: 5%;
@@ -351,63 +327,150 @@ $color-yellow: #E9CC3F;
       }
   }
 
-  @media (max-width: 780px){
-    .btn{
-      width: 200px;
+  @media (max-width: 1100px) {
+
+    .tab-btn{
+      display: block;
+    }
+    .modal-content {
+      max-width: 90%;
+      padding: 20px;
+      border-radius: 20px;
+      background: #fff;
+    }
+  
+    .modal-box {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+  
+    .tab-btn {
+      flex: 1;
+      padding: 10px;
+      background: none;
+      border: none;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 8px 8px 0 0;
+      background-color: #f2f2f2;
+      transition: 0.3s ease;
+    }
+  
+    .tab-btn.active {
+      background-color: #fff;
+      border-bottom: 2px solid #000;
+    }
+  
+    .tab-content {
+      display: none;
+    }
+  
+    .tab-content.active {
+      display: block;
+    }
+  
+    .modal-left, .modal-right {
+      width: 100%;
+    }
+  
+    .iban-copy {
+      display: flex;
+      gap: 10px;
+      margin: 10px 0;
+    }
+  
+    .iban-copy input {
+      flex: 1;
+      padding: 8px;
+      font-size: 16px;
+    }
+  
+    .iban-copy button {
+      font-size: 18px;
+      padding: 5px 10px;
+    }
+  
+    .qr {
+      width: 100%;
+      max-width: 200px;
+      margin: 10px auto;
+      display: block;
+    }
+  
+    .purpose {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  
+    .support-btn {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+    }
+  
+    .close-modal {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
     }
   }
+  
 
   @media (max-width: 1040px) {
     .statisth3 {
-        // margin-left: 100px;
         margin-right: 30px;
         margin-left: 30px;
         font-size: 33px;
-        // font-style: normal;
         font-weight: 300;
-        // line-height: normal;
       }
 
     .numbrs {
-        padding: 0px;
+        padding:0;
         display: flex;
-        flex-wrap: wrap;            /* Разрешаем перенос элементов */
+        flex-wrap: wrap;         
         justify-content: center;
         align-items: center;
         text-align: center;
-        /* Ширину можно настроить под нужды макета */
         width: 90%;
       }
       
       .number1,
       .number2,
       .number3 {
-        flex: 0 0 20%;           /* Первые три займут примерно по одной трети строки */
+        flex: 0 0 20%;           
       }
       
       .number4,
       .number5 {
         margin-top: 20px;
-        flex: 0 0 40%;              /* Последние два – по половине строки (будут во второй строке) */
+        flex: 0 0 40%;              
       }
 }
 
   @media (max-width: 1030px) {
     .blocks {
-        // margin-top: 19px;
         margin-left: 300px;
-        // display: inline-block;
       }
 
-
       .textLogo {
-        // top: 200px;
         color: $color-white;
-        padding: 0px 0px;
+        padding:00;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // align-items: center;
         width: 1200px;
         margin-left: 0;
         padding-left: 0;
@@ -418,29 +481,11 @@ $color-yellow: #E9CC3F;
         padding-right: 10px;
         margin-bottom: 20px;
       }
-
-      // .h1Logo{
-      //   font-size: 90px;
-      // }
-
-      // .btn {
-      //   display: block;
-      //   width: 349px;
-      //   padding: 18px 18px;
-      //   justify-content: center;
-      //   align-items: center;
-      //   margin: 0 auto;
-      //   margin-left: 0px;
-      //   font-size: 22px;
-      //   // margin-top: 68px;
-      // }
 }
 
 @media (max-width: 970px) {
     .blocks {
-        // margin-top: 19px;
         margin-left: 250px;
-        // display: inline-block;
       }
       .textsContact{
         width: 433px;
@@ -452,7 +497,7 @@ $color-yellow: #E9CC3F;
       .linksFooter {
         display: flex;
         flex-direction: column;
-        gap: 0px;
+        gap:0;
         margin-left: 100px;
       }
 
@@ -505,13 +550,10 @@ $color-yellow: #E9CC3F;
 
 @media (max-width: 932px) {
     .blocks {
-        // margin-top: 19px;
         margin-left: 230px;
-        // display: inline-block;
       }
 
       .textsContact{
-        // font-size: 22px;
         width: 433px;
         margin-left: 30px;
         padding-top: 30px;
@@ -521,13 +563,6 @@ $color-yellow: #E9CC3F;
       .contactsCatd {
         height: 643px;
       }
-
-      // .h1Logo{
-      //   font-size: 80px;
-      // }
-      // .righrLogo{
-      //   margin-left: 1px
-      // }
 
       .LogoDiv{
         height: auto;
@@ -547,29 +582,24 @@ $color-yellow: #E9CC3F;
         width: 65px !important;
         height: 50px !important;
       }
-
 }
 
 @media (max-width: 899px) {
     .blocks {
         margin-left: 210px;
       }
-
 }
 
 @media (max-width: 885px) {
 
     .textsContact{
         width: 80%;
-        // margin-left: 80px;
         padding: 50px 20px 20px;
         text-align: center;
         background-color: #f8f9face;
         border-radius: 20px;
-        // padding: 0px;
         margin: 50px;
     }
-      
 }
 
 @media (max-width: 880px){
@@ -586,17 +616,12 @@ $color-yellow: #E9CC3F;
 
 @media (max-width: 875px) {
     .blocks {
-        // margin-top: 19px;
         margin-left: 190px;
-        // display: inline-block;
       }
-
 }
 
 @media (max-width: 865px) {
-
     .about {
-        // margin-top: 170px;
         display: flex;
         flex-direction: column;
       }
@@ -647,10 +672,7 @@ $color-yellow: #E9CC3F;
       }
 
     .blocks {
-        // margin-top: 19px;
-        // display: flex;
         margin: 65px auto 0;
-        // display: inline-block;
       }
       
       .blocksVertical {
@@ -701,18 +723,12 @@ $color-yellow: #E9CC3F;
         padding-bottom: 50px;
         height: auto;
       }
-
-      // .apanotationTextLogo {
-      //   bottom: 40px;
-      //   right: 51px;
-      //   font-size: 14px;
-      // }
 }
 
 @media (max-width: 845px) {
   .textLogo {
     color: $color-white;
-    padding: 150px 0px;
+    padding: 150px0;
     width: auto;
   }
   .img1Mision {
@@ -724,7 +740,6 @@ $color-yellow: #E9CC3F;
     display: flex;
     gap: 0;    
     padding: 0 50px;
-
   }
   
   .text1Mision1 {
@@ -733,7 +748,7 @@ $color-yellow: #E9CC3F;
 
   }
   .blockMision2 {
-    margin-left: 0px;
+    margin-left:0;
     width: auto;
     display: flex;
     padding: 0 50px;
@@ -747,13 +762,6 @@ $color-yellow: #E9CC3F;
 
   .img1Mision2 {
     display: none;
-  }
-}
-
-@media (max-width: 844px){
-  .apanotationTextLogo{
-    color: red;
-    font-size: 2rem;
   }
 }
 
@@ -771,16 +779,10 @@ $color-yellow: #E9CC3F;
         margin-bottom: 40px;      }
 }
 
-@media (max-width: 759px) {
-  // .h1Logo{
-  //   font-size: 65px;
-  // }
-}
-
-@media (max-width: 745px) {
-  // .h1Logo{
-  //   font-size: 60px;
-  // }
+@media (max-width: 780px){
+  .btn{
+    width: 200px;
+  }
 }
 
 @media (max-width: 710px){
@@ -825,7 +827,6 @@ $color-yellow: #E9CC3F;
       display: none;
     }
   }
-
 }
 
 @media (max-width: 613px){
@@ -841,21 +842,224 @@ $color-yellow: #E9CC3F;
       .textZaklik {
         font-size: 50px;
       }
+
+      .blockZbir1 {
+        margin-top: 100px;
+
+        h4{
+          font-size: 32px;
+          font-weight: 500;
+          display: flex;
+          justify-content: center;
+          margin-top: 80px;
+        }
+        .textZbir1 {
+          font-size: 14px;
+          font-weight: 400;
+          margin-left: 10%;
+          width: auto;
+          margin-top: 50px;
+        }
+        .textZbir2 {
+          font-size: 14px;
+          font-weight: 400;
+          margin-left: 10%;
+          width: auto;
+          margin-top: 23px;
+        }
+        
+        .priseZbir1 {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 30px; 
+          margin-left: 10%;
+          margin-top: 30px;
+        }
+        .fs600{
+          font-size: 24px;
+        }
+        
+        .btnZbir1 {
+          height: auto;
+          font-size: 16px;
+        }
+      }
+      
+      .textZbir {
+        margin: 50px auto;
+        font-size: 18px;
+        width: auto;
+        }
+      
+      
+      .priseZbir {
+        font-size: 16px;
+      }
+            
+      .zbir {
+        position: absolute;
+        bottom: 15%;
+        right: 5%;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+      }      
+      .blockZbir:hover{
+        .textZbir {
+          font-size: 22px;
+          transition: 0.7s ease;
+
+          }
+          .priseZbir {
+            font-size: 20px;
+            transition: 0.7s ease;
+          }
+      }
 }
 
-@media (max-width: 588px) {
-  // .h1Logo{
-  //   font-size: 45px;
-  //   margin-bottom: -25px;
-  // }
+@media (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 8px;
+    border-bottom: none;
+  }
+
+  .tab-btn {
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .modal-left h3,
+  .modal-right h3 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .input-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .input-row input {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .quick-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .quick-buttons button {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .support-btn {
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .iban-copy {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .iban-copy input {
+    width: 100%;
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .iban-copy button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .qr {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .purpose {
+    font-size: 14px;
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  .modal .close-modal {
+    top: 8px;
+    right: 8px;
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dopomoga{
+    margin-top: 100px;
+
+    .textdopomoga1 {
+      margin-top: 30px;
+      margin-left: 10px;
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    .textdopomoga2 {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 45px;
+    }
+
+    .textsDopomoga4{
+      margin: 40px 0 40px 10px;
+    }
+  }
 }
 
 @media (max-width: 488px){
   .btnArrow {
-    display: none;
-  }
+    font-size: 14px;
+    width: 60px;
+    height: 60px;
+}
 
   .linksFooter {
     margin-left: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  .dopomoga{
+    margin-top: 100px;
+
+    .textdopomoga1 {
+      margin-top: 30px;
+      margin-left: 10px;
+      font-size: 16px;
+      line-height: 30px;
+    }
+
+    .textdopomoga2 {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 45px;
+    }
+
+    .textsDopomoga4{
+      margin: 40px 0 40px 10px;
+    }
   }
 }
