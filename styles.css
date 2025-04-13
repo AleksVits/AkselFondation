@@ -43,15 +43,16 @@ header .nav li {
   padding: 4px 8px;
   cursor: pointer;
 }
-header .nav li::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #444;
-  transition: width 0.3s ease;
+header .nav li a:hover {
+  color: rgb(26, 26, 26);
+  font-weight: 600;
+}
+header .nav .h1Logo {
+  font-size: clamp(39px, 8vw, 80px);
+  line-height: 140%;
+}
+header .nav .line {
+  width: 10;
 }
 
 .h1Logo {

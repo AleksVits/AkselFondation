@@ -46,7 +46,6 @@ body{
 }
 
 header{
-  // width: 100%;
   .logo1{
   width: 136.789px;
   height: 113px;
@@ -79,17 +78,19 @@ header{
     position: relative;
     padding: 4px 8px;
     cursor: pointer;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: $color-black;
-      transition: width 0.3s ease;
+    a:hover{
+      color: rgb(26, 26, 26);
+      font-weight: 600;;
     }
+  }
+
+  .h1Logo{
+    font-size: clamp(39px, 8vw, 80px);
+    line-height: 140%;
+  }
+
+.line{
+  width: 10
   }
 } 
 }
