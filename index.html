@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="globals.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="adaptive.css">
-  <title>Document</title>
+  <title>Благодійний фонд "Aksel"</title>
 </head>
 <body>
 
@@ -20,6 +20,9 @@
         <li class="liNav"><a href="#dopomoga">Як допомогти</a></li>
         <li class="liNav"><a href="#pay"><strong>ЗБІР</strong></a></li>
         <li class="liNav"><a href="#contacts">Контакти</a></li>
+        <li class="liNav">
+          <button class="lang-btn" onclick="window.location.href='index-en.html'">EN</button>
+        </li>        
     <div class="burger-btn" id="burgerBtn">
           <span></span>
           <span></span>
@@ -36,6 +39,9 @@
             <li><a href="#dopomoga">ЯК ДОПОМОГТИ</a></li>
             <li><a href="#pay"><strong>ЗБІР</strong></a></li>
             <li><a href="#contacts">КОНТАКТИ</a></li>
+            <li>
+              <button class="lang-btn" onclick="window.location.href='index-en.html'">EN</button>
+            </li>
           </ul>
         </div>
       </div>
@@ -291,9 +297,9 @@
       
         <div class="tab-content active" id="card">
           <div class="modal-left">
-            <h3>Підтримати цей збір</h3>
+            <h3>Підтримати цей збір <img class="logoPay" src="Img/logoPayBlackSmall.png" alt=""></h3>
             <div class="input-row">
-              <input type="number" placeholder="Введіть суму" />
+              <input type="number" placeholder="Введіть суму"/>
               <span>грн</span>
             </div>
             <div class="quick-buttons">
@@ -331,122 +337,7 @@
       </div>
         </div>
   
+<script src="script.js"></script>
 
-
-  <script>
-    // Плюс кнопки: додають суму до input
-const amountInput = document.querySelector('.modal-left input[type="number"]');
-const addButtons = document.querySelectorAll('.quick-buttons button');
-
-addButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const addValue = parseInt(btn.dataset.amount, 10);
-    const currentValue = parseInt(amountInput.value || '0', 10);
-    amountInput.value = currentValue + addValue;
-  });
-});
-
-
-    document.addEventListener('DOMContentLoaded', () => {
-  
-      // Анімація появи
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add('visible');
-            }, index * 100);
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-  
-      document.querySelectorAll('.gallery-scroll img').forEach(img => {
-        observer.observe(img);
-      });
-  
-      // Модальне вікно
-      const openModalBtns = document.querySelectorAll('.zbir, .btnZbir1');
-      const modal = document.getElementById('donationModal');
-      const closeModalBtn = modal.querySelector('.close-modal');
-  
-      openModalBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          modal.classList.add('show');
-        });
-      });
-  
-      closeModalBtn.addEventListener('click', () => {
-        modal.classList.remove('show');
-      });
-  
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-          modal.classList.remove('show');
-        }
-      });
-
-      // Вкладки в модалці
-const tabButtons = document.querySelectorAll('.tab-btn');
-const tabContents = document.querySelectorAll('.tab-content');
-
-tabButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    // Прибрати активні
-    tabButtons.forEach(b => b.classList.remove('active'));
-    tabContents.forEach(c => c.classList.remove('active'));
-
-    // Додати нові активні
-    btn.classList.add('active');
-    document.getElementById(btn.dataset.tab).classList.add('active');
-  });
-});
-
-  
-      // Копіювання IBAN
-      const copyBtn = modal.querySelector('.iban-copy button');
-      const ibanInput = modal.querySelector('.iban-copy input');
-  
-      copyBtn.addEventListener('click', () => {
-        ibanInput.select();
-        document.execCommand('copy');
-        copyBtn.textContent = '✓';
-        setTimeout(() => copyBtn.textContent = '📋', 1500);
-      });
-    });
-
-//////////////////////Бургер меню
-    const burgerBtn = document.getElementById('burgerBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-const closeMenu = document.getElementById('closeMenu');
-
-burgerBtn.addEventListener('click', () => {
-  mobileMenu.classList.add('open');
-});
-
-closeMenu.addEventListener('click', () => {
-  mobileMenu.classList.remove('open');
-});
-
-window.addEventListener('click', (e) => {
-  if (e.target === mobileMenu) {
-    mobileMenu.classList.remove('open');
-  }
-});
-
-// Закривати меню після натискання на пункт
-const mobileLinks = document.querySelectorAll('#mobileMenu a');
-
-mobileLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-  });
-});
-
-
-  </script>
-  
 </body>
 </html>

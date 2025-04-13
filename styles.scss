@@ -59,7 +59,7 @@ header{
 
 
 .nav{
-  width: 579px;
+  width: 600px;
   height: 50px;
   flex-shrink: 0;
   border-radius: 10px;
@@ -95,6 +95,20 @@ header{
 } 
 }
 
+.lang-btn {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.lang-btn:hover {
+  background-color: #f0f0f0;
+}
+
   .h1Logo{
     font-size: clamp(39px, 8vw, 80px);
     line-height: 140%;
@@ -108,7 +122,6 @@ header{
 
 .LogoDiv{
   position: relative;
-  // width: 1442px;
   height: 90vh;
   background-image: url('Img/fonsLogo.jpg');
   background-size: cover; /* подгонка изображения */
@@ -116,19 +129,14 @@ header{
   background-repeat: no-repeat; /* отключить повтор */
 
   .textLogo {
-    // position: absolute;
-    // top: 200px;
     color: $color-white;
-    // margin: auto auto auto 79px;
     padding: 150px 5%;
     width: auto;
 
 
 
     .sloganLogo {
-      // font-size: 44px;
       font-size: clamp(44px, 8vw, 12px);
-
       font-style: italic;
       font-weight: 200;
       line-height: 72px;
@@ -145,7 +153,7 @@ header{
     }
     
     .righrLogo{
-      
+      text-transform: uppercase;
     }
     
     .btn {
@@ -156,7 +164,6 @@ header{
       align-items: center;
       margin: 0 auto;
       @include colorBackgroundBlue;
-      // margin-left: 365px;
       border-radius: 22px;
       font-size: 22px;
       margin-top: 68px;
@@ -1221,6 +1228,7 @@ footer{
   margin-top: 50px;
   margin-bottom: 50px;
   z-index: 10;
+  position: relative;
 }
 .modal-right {
   flex: 1;
@@ -1232,9 +1240,15 @@ footer{
   z-index: 10;
 }
 
-.modal-left {
-  // width: 50%;
+.logoPay{
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  display: none;
 
+}
+
+.modal-left {
   background: #333;
   color: white;
   display: flex;
@@ -1306,7 +1320,6 @@ footer{
 
 
     &:hover {
-      // transform: scale(1.05);
       border: 3px solid black;
     }
 
@@ -1318,10 +1331,12 @@ footer{
 
   .logoPayPhon{
     position: absolute;
-    bottom: 90px;
-    left: 40px;
+    bottom: 0px;
+    left: 00px;
     z-index: -1;
-    
+    height: 70%;
+    background-repeat: repeat;
+    background-position: center;
   }
 }
 

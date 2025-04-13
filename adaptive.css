@@ -802,6 +802,10 @@
     max-height: 90vh;
     overflow-y: auto;
   }
+  .modal-right, .modal-left {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
   .tabs {
     flex-direction: column;
     gap: 8px;
@@ -870,6 +874,9 @@
   }
   .logoPayPhon {
     display: none;
+  }
+  .logoPay {
+    display: block;
   }
 }
 @media (max-width: 600px) {

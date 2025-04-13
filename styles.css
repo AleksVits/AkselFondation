@@ -24,7 +24,7 @@ header .logo1 {
   z-index: 10;
 }
 header .nav {
-  width: 579px;
+  width: 600px;
   height: 50px;
   flex-shrink: 0;
   border-radius: 10px;
@@ -53,6 +53,20 @@ header .nav .h1Logo {
 }
 header .nav .line {
   width: 10;
+}
+
+.lang-btn {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.lang-btn:hover {
+  background-color: #f0f0f0;
 }
 
 .h1Logo {
@@ -92,6 +106,9 @@ header .nav .line {
   line-height: 93px; /* 115.904% */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.945);
   width: auto;
+}
+.LogoDiv .textLogo .righrLogo {
+  text-transform: uppercase;
 }
 .LogoDiv .textLogo .btn {
   display: flex;
@@ -1073,6 +1090,7 @@ footer {
   margin-top: 50px;
   margin-bottom: 50px;
   z-index: 10;
+  position: relative;
 }
 
 .modal-right {
@@ -1083,6 +1101,13 @@ footer {
   margin-top: 50px;
   margin-bottom: 50px;
   z-index: 10;
+}
+
+.logoPay {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  display: none;
 }
 
 .modal-left {
@@ -1157,9 +1182,12 @@ footer {
 }
 .modal-left .logoPayPhon {
   position: absolute;
-  bottom: 90px;
-  left: 40px;
+  bottom: 0px;
+  left: 0px;
   z-index: -1;
+  height: 70%;
+  background-repeat: repeat;
+  background-position: center;
 }
 
 .modal-right {

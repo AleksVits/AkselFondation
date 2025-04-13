@@ -931,7 +931,7 @@ $color-yellow: #E9CC3F;
     max-height: 80vh;
     overflow-y: auto;
   }
-}
+
 
   .tabs {
     flex-direction: column;
@@ -1016,6 +1016,9 @@ $color-yellow: #E9CC3F;
 
   .logoPayPhon{
     display: none;
+  }
+  .logoPay{
+    display: block;
   }
 }
 
