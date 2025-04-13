@@ -45,6 +45,25 @@ body{
   color: $color-black;
 }
 
+.scroll-section {
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 1s ease-out;
+}
+
+.scroll-section.left {
+  transform: translateX(-100px);
+}
+
+.scroll-section.right {
+  transform: translateX(100px);
+}
+
+.scroll-section.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 header{
   .logo1{
   width: 136.789px;
@@ -122,7 +141,7 @@ header{
 
 .LogoDiv{
   position: relative;
-  height: 90vh;
+  // height: 90vh;
   background-image: url('Img/fonsLogo.jpg');
   background-size: cover; /* подгонка изображения */
   background-position: center; /* центрирование */
@@ -193,6 +212,40 @@ header{
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.945);
   }
   
+}
+
+@keyframes cinematicIntro {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(1.05);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.hero-animate1,
+.hero-animate2,
+.hero-animate3,
+.hero-animate4 {
+  opacity: 0;
+  animation: cinematicIntro 1s ease-out forwards;
+}
+
+.hero-animate1 {
+  .hero-animate2 {
+    animation-delay: 0s;
+  }
+  animation-delay: 2.0s;
+}
+.hero-animate3 {
+  animation-delay: 1s;
+}
+.hero-animate4 {
+  animation-delay: 3.0s;
 }
 
 

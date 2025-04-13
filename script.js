@@ -137,3 +137,36 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.scroll-section');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach((section, index) => {
+      // Додаємо left/right по черзі, якщо ще не задано
+      if (!section.classList.contains('left') && !section.classList.contains('right')) {
+        section.classList.add(index % 2 === 0 ? 'left' : 'right');
+      }
+      observer.observe(section);
+    });
+  });
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const hero = document.querySelector('.hero-animate');
+    if (hero) {
+      hero.style.opacity = '1'; // fallback
+      hero.classList.add('hero-animate'); // якщо додається динамічно
+    }
+  });
