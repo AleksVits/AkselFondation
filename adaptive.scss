@@ -67,11 +67,9 @@ $color-yellow: #E9CC3F;
 
   @media (max-width: 1400px) {
     .black {
-        display: none;
         margin-top: 200px;
         width: 100%;
         height: 1000px;
-        background-color: black;
         overflow: hidden;
       }
 }
@@ -546,6 +544,10 @@ $color-yellow: #E9CC3F;
         top: 40px;
         right: 33px;
       }
+
+      .textFooter {
+        margin: 35px 120px auto;
+      }
 }
 
 @media (max-width: 932px) {
@@ -782,6 +784,13 @@ $color-yellow: #E9CC3F;
 @media (max-width: 780px){
   .btn{
     width: 200px;
+  }
+  .black {
+    margin-bottom: 100px;
+  }
+
+  .logoBlack {
+    width: 20%;
   }
 }
 
@@ -1054,6 +1063,10 @@ $color-yellow: #E9CC3F;
 
   .linksFooter {
     margin-left: 50px;
+  }
+
+  .textFooter {
+    margin: 35px 70px auto;
   }
 }
 
