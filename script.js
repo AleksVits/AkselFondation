@@ -170,3 +170,35 @@ document.addEventListener('DOMContentLoaded', () => {
       hero.classList.add('hero-animate'); // якщо додається динамічно
     }
   });
+
+
+  ///////////////////////////////Black Секція поява анімація
+
+  const blackSection = document.querySelector('.textBlack');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 1 // відсоток появи елемента у вікні (можеш змінити)
+  });
+
+  observer.observe(blackSection);
+
+  window.addEventListener("scroll", function() {
+    var section = document.querySelector(".black");
+    var rect = section.getBoundingClientRect();
+  
+    // Кілька пікселів до і після секції для плавної зміни фону
+    var offset = 150;  // можна змінювати для більш раннього/пізнього ефекту
+  
+    if (rect.top <= window.innerHeight - offset && rect.bottom >= offset) {
+      document.body.style.backgroundColor = "black";
+    } else {
+      document.body.style.backgroundColor = "white";
+    }
+  });
+  

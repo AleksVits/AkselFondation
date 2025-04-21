@@ -11,6 +11,7 @@ body {
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
   color: #444;
+  transition: background-color 0.9s ease; /* Плавний перехід кольору фону */
 }
 
 .scroll-section {
@@ -70,8 +71,9 @@ header .nav .h1Logo {
   font-size: clamp(39px, 8vw, 80px);
   line-height: 140%;
 }
-header .nav .line {
-  width: 10;
+
+.liNav{
+  font-size: 14px;
 }
 
 .lang-btn {
@@ -143,10 +145,15 @@ header .nav .line {
   transition: transform 0.5s ease;
   text-transform: uppercase;
   letter-spacing: 4.5px;
+  transition: 0.9s ease;
 }
 .LogoDiv .textLogo .btn:hover {
   transform: scale(1.1); /* увеличивает на 10% */
   transition: transform 0.3s ease;
+}
+.btn:hover{
+  scale: 1.2;
+  transition: 0.9s ease;
 }
 .LogoDiv .apanotationTextLogo {
   color: #F8F9FA;
@@ -577,11 +584,26 @@ main {
 }
 
 .black {
-  margin-top: 200px;
+  margin-top: 500px;
+  margin-bottom: 500px;
+
   width: 100%;
   height: 1000px;
   background-color: black;
   overflow: hidden;
+}
+
+.textBlack {
+  margin: 213px auto;
+  display: flex;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.textBlack.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .logoBlack {
@@ -589,11 +611,6 @@ main {
   margin: 60px auto 0 auto;
   max-width: 100%;
   height: auto;
-}
-
-.textBlack {
-  margin: 213px auto;
-  display: flex;
 }
 
 .btnBlack {
